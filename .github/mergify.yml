@@ -3,7 +3,7 @@ pull_request_rules:
     conditions:
       - and:
           - label=dependencies
-          - check-success=Check Flake
+          - check-success=All Garnix checks
     actions:
       update:
       merge:
