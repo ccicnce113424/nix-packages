@@ -7,7 +7,7 @@
 rustPlatform.buildRustPackage (final: {
   inherit (sources.mpv-handler) pname version src;
 
-  cargoHash = "sha256-FrE1PSRc7GTNUum05jNgKnzpDUc3FiS5CEM18It0lYY=";
+  cargoLock = sources.mpv-handler.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ copyDesktopItems ];
   desktopItems = [
