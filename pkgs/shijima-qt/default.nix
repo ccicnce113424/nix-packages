@@ -14,7 +14,7 @@
   zlib,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (final: {
   pname = "shijima-qt";
   version = "0.1.0";
 
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     (fetchFromGitHub {
       owner = "pixelomer";
       repo = "Shijima-Qt";
-      rev = "v${version}";
+      rev = "v${final.version}";
       hash = "sha256-/oyFKkzhEW1+VbJyEmUw6s1m83edQ1lNYDlF5gQR9s4=";
       fetchSubmodules = true;
     }).overrideAttrs
@@ -97,4 +97,4 @@ stdenv.mkDerivation rec {
     mainProgram = "shijima-qt";
     platforms = lib.platforms.linux;
   };
-}
+})
