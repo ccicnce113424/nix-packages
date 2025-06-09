@@ -1,19 +1,11 @@
 {
+  sources,
   lib,
   rustPlatform,
-  fetchFromGitHub,
   copyDesktopItems,
 }:
 rustPlatform.buildRustPackage (final: {
-  pname = "mpv-handler";
-  version = "0.3.16";
-
-  src = fetchFromGitHub {
-    owner = "akiirui";
-    repo = "mpv-handler";
-    rev = "v${final.version}";
-    hash = "sha256-RpfHUVZmhtneeu8PIfxinYG3/groJPA9QveDSvzU6Zo=";
-  };
+  inherit (sources.mpv-handler) pname version src;
 
   cargoHash = "sha256-FrE1PSRc7GTNUum05jNgKnzpDUc3FiS5CEM18It0lYY=";
 

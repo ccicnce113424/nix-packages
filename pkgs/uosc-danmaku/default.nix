@@ -1,22 +1,15 @@
 {
+  sources,
   lib,
   buildLua,
-  fetchFromGitHub,
   gitUpdater,
   danmakufactory,
   opencc,
 }:
 buildLua (final: {
-  pname = "uosc_danmaku";
-  version = "1.3.1";
-  scriptPath = ".";
+  inherit (sources.uosc-danmaku) pname version src;
 
-  src = fetchFromGitHub {
-    owner = "Tony15246";
-    repo = "uosc_danmaku";
-    rev = "v${final.version}";
-    hash = "sha256-m+HubIlELU/COP5rgul7LBPaOEWGz2ms89mF/w3ZWGQ=";
-  };
+  scriptPath = ".";
 
   fixupPhase = ''
     runHook preFixup
