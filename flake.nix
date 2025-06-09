@@ -20,23 +20,16 @@ rec {
         ./treefmt.nix
         # optional: introduce nixpkgs into perSystem
         ./nixpkgs.nix
+        ./pkgs/flake-module.nix
       ];
       flake.templates.default = {
         path = ./.;
         inherit description;
       };
 
-      # test package
       perSystem =
-        { self', pkgs, ... }:
+        { pkgs, ... }:
         {
-          packages.hello = pkgs.writeShellScriptBin "hello" "echo Hello, flake!";
-          apps.hello = {
-            type = "app";
-            program = "${self'.packages.hello}/bin/hello";
-          };
-          packages.default = self'.packages.hello;
-          apps.default = self'.apps.hello;
           devShells.default = pkgs.callPackage ./devshell.nix { };
         };
     };
