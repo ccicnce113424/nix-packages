@@ -41,8 +41,31 @@
   pkg-config,
   libappindicator-gtk3,
 }:
-let
-  libs = [
+stdenv.mkDerivation (final: {
+  pname = "wpsoffice-365";
+  version = "12.8.2.21176";
+
+  src = fetchurl {
+    url = "https://pubwps-wps365-obs.wpscdn.cn/download/Linux/${lib.last (builtins.splitVersion final.version)}/wps-office_${final.version}.AK.preload.sw_amd64.deb";
+    hash = "sha256-kcxZ5ySWYpBJ7a8bNfp9ho4vWPZaVz2fcN+5HwQoGyw=";
+    # curlOptsList = [ "-ehttps://365.wps.cn" ];
+  };
+
+  unpackCmd = " dpkg -x $src .";
+  sourceRoot = ".";
+
+  nativeBuildInputs = [
+    dpkg
+    autoPatchelfHook
+    makeWrapper
+    pkg-config
+  ];
+
+  preBuild = ''
+    addAutoPatchelfSearchPath ${libmysqlclient}/lib/mariadb/
+  '';
+
+  buildInputs = [
     stdenv.cc.cc
     stdenv.cc.libc
     stdenv.cc.cc.lib
@@ -83,44 +106,19 @@ let
     libtiff
     libappindicator-gtk3
   ];
+
   wpscloudsvr-wrapper = fetchFromGitHub {
     owner = "7Ji";
     repo = "wpscloudsvr-wrapper";
     rev = "3ce0834f6fb2b58cb8288d8190254f881f682094";
     sha256 = "sha256-LPpI4EboYUoLaod4gxDVty3VylPCN/ZexkE4KeCfla8=";
   };
-in
-stdenv.mkDerivation rec {
-  pname = "wpsoffice-365";
-  version = "12.8.2.21176";
-
-  src = fetchurl {
-    url = "https://pubwps-wps365-obs.wpscdn.cn/download/Linux/${lib.last (builtins.splitVersion version)}/wps-office_${version}.AK.preload.sw_amd64.deb";
-    hash = "sha256-kcxZ5ySWYpBJ7a8bNfp9ho4vWPZaVz2fcN+5HwQoGyw=";
-    # curlOptsList = [ "-ehttps://365.wps.cn" ];
-  };
-
-  unpackCmd = " dpkg -x $src .";
-  sourceRoot = ".";
-
-  nativeBuildInputs = [
-    dpkg
-    autoPatchelfHook
-    makeWrapper
-    pkg-config
-  ];
-
-  preBuild = ''
-    addAutoPatchelfSearchPath ${libmysqlclient}/lib/mariadb/
-  '';
-
-  buildInputs = libs;
 
   buildPhase = ''
     runHook preBuild
 
     # Build wpscloudsvr-wrapper
-    gcc $(pkg-config --cflags gtk+-3.0 appindicator3-0.1) $(pkg-config --libs gtk+-3.0 appindicator3-0.1) -DSVR_PATH=\"$out/opt/kingsoft/wps-office/office6/wpscloudsvr\" -o ./wpscloudsvr ${wpscloudsvr-wrapper}/wpscloudsvr.c
+    gcc $(pkg-config --cflags gtk+-3.0 appindicator3-0.1) $(pkg-config --libs gtk+-3.0 appindicator3-0.1) -DSVR_PATH=\"$out/opt/kingsoft/wps-office/office6/wpscloudsvr\" -o ./wpscloudsvr ${final.wpscloudsvr-wrapper}/wpscloudsvr.c
 
     runHook postBuild
   '';
@@ -200,7 +198,7 @@ stdenv.mkDerivation rec {
     done
 
     # set ENV
-    sed -i "2i unset WAYLAND_DISPLAY && export LD_LIBRARY_PATH=${lib.makeLibraryPath libs} && export QT_QPA_PLATFORM=xcb" $out/bin/{wps,wpp,et,wpspdf,misc,wpsclouddisk}
+    sed -i "2i unset WAYLAND_DISPLAY && export LD_LIBRARY_PATH=${lib.makeLibraryPath final.buildInputs} && export QT_QPA_PLATFORM=xcb" $out/bin/{wps,wpp,et,wpspdf,misc,wpsclouddisk}
 
     runHook postInstall
   '';
@@ -222,4 +220,4 @@ stdenv.mkDerivation rec {
     sourceProvenance = with sourceTypes; [ binaryNativeCode ];
     license = licenses.unfreeRedistributable;
   };
-}
+})
