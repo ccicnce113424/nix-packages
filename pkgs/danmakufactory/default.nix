@@ -1,20 +1,12 @@
 {
+  sources,
   lib,
   stdenv,
-  fetchFromGitHub,
   unstableGitUpdater,
   ...
 }:
 stdenv.mkDerivation (final: {
-  pname = "DanmakuFactory";
-  version = "0-unstable-2025-04-12";
-
-  src = fetchFromGitHub {
-    owner = "hihkm";
-    repo = "DanmakuFactory";
-    rev = "40fe8916f8528f57a4a1ca245d043d5c4d2566eb";
-    hash = "sha256-fxp0lmvIQU7WRs0IkZHpvG73PkgAdiDMQvrGHWSsSqI=";
-  };
+  inherit (sources.danmakufactory) pname version src;
 
   installPhase = ''
     runHook preInstall
