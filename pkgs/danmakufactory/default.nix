@@ -2,7 +2,6 @@
   sources,
   lib,
   stdenv,
-  unstableGitUpdater,
   ...
 }:
 stdenv.mkDerivation (final: {
@@ -16,8 +15,6 @@ stdenv.mkDerivation (final: {
 
     runHook postInstall
   '';
-
-  passthru.updateScript = unstableGitUpdater { };
 
   meta = {
     description = "支持特殊弹幕的xml转ass格式转换工具";
