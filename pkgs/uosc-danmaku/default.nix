@@ -2,7 +2,6 @@
   sources,
   lib,
   buildLua,
-  gitUpdater,
   danmakufactory,
   opencc,
 }:
@@ -27,7 +26,6 @@ buildLua (final: {
   '';
 
   passthru.scriptName = final.pname;
-  passthru.updateScript = gitUpdater { rev-prefix = "v"; };
 
   meta = {
     description = "在MPV播放器中加载弹弹play弹幕";
