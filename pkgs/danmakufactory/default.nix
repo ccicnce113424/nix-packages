@@ -5,7 +5,7 @@
   ...
 }:
 stdenv.mkDerivation (final: {
-  inherit (sources.danmakufactory) pname version src;
+  inherit (sources) pname version src;
 
   installPhase = ''
     runHook preInstall
