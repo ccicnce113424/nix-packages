@@ -8,24 +8,24 @@
 buildLua (final: {
   inherit (sources) pname version src;
 
+  scriptName = "uosc_danmaku";
   scriptPath = ".";
+  passthru.scriptName = final.scriptName;
 
   fixupPhase = ''
     runHook preFixup
 
-    rm -rf $out/share/mpv/scripts/${final.pname}/bin/DanmakuFactory/*
-    ln -sf ${danmakufactory}/bin/DanmakuFactory $out/share/mpv/scripts/${final.pname}/bin/DanmakuFactory
+    rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/DanmakuFactory/*
+    ln -sf ${danmakufactory}/bin/DanmakuFactory $out/share/mpv/scripts/${final.scriptName}/bin/DanmakuFactory
 
-    rm -rf $out/share/mpv/scripts/${final.pname}/bin/OpenCC_Windows
-    rm -rf $out/share/mpv/scripts/${final.pname}/bin/OpenCC_Linux/*
-    ln -sf ${opencc}/bin/opencc $out/share/mpv/scripts/${final.pname}/bin/OpenCC_Linux
+    rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/OpenCC_Windows
+    rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/OpenCC_Linux/*
+    ln -sf ${opencc}/bin/opencc $out/share/mpv/scripts/${final.scriptName}/bin/OpenCC_Linux
 
-    rm -rf $out/share/mpv/scripts/${final.pname}/bin/dandanplay/dandanplay.exe
+    rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/dandanplay/dandanplay.exe
 
     runHook postFixup
   '';
-
-  passthru.scriptName = final.pname;
 
   meta = {
     changelog = "https://github.com/Tony15246/uosc_danmaku/releases/tag/${final.version}";
