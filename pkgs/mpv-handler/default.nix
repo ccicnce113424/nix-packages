@@ -5,9 +5,9 @@
   copyDesktopItems,
 }:
 rustPlatform.buildRustPackage (final: {
-  inherit (sources.mpv-handler) pname version src;
+  inherit (sources) pname version src;
 
-  cargoLock = sources.mpv-handler.cargoLock."Cargo.lock";
+  cargoLock = sources.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ copyDesktopItems ];
   desktopItems = [

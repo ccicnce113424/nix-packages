@@ -6,7 +6,7 @@
   opencc,
 }:
 buildLua (final: {
-  inherit (sources.uosc-danmaku) pname version src;
+  inherit (sources) pname version src;
 
   scriptPath = ".";
 

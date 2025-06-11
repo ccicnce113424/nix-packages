@@ -8,6 +8,17 @@
 {
   danmakufactory = {
     pname = "danmakufactory";
+    version = "v1.70";
+    src = fetchFromGitHub {
+      owner = "hihkm";
+      repo = "DanmakuFactory";
+      rev = "v1.70";
+      fetchSubmodules = false;
+      sha256 = "sha256-dPgWVJuNOzTc+ocMyGHBb4ExB9P1Wu+uTQ62UejAAfE=";
+    };
+  };
+  danmakufactory-git = {
+    pname = "danmakufactory-git";
     version = "40fe8916f8528f57a4a1ca245d043d5c4d2566eb";
     src = fetchFromGitHub {
       owner = "hihkm";
@@ -45,5 +56,17 @@
       fetchSubmodules = false;
       sha256 = "sha256-m+HubIlELU/COP5rgul7LBPaOEWGz2ms89mF/w3ZWGQ=";
     };
+  };
+  uosc-danmaku-git = {
+    pname = "uosc-danmaku-git";
+    version = "8080a697c2ad15d178e1a04718e5de8208d334db";
+    src = fetchFromGitHub {
+      owner = "Tony15246";
+      repo = "uosc_danmaku";
+      rev = "8080a697c2ad15d178e1a04718e5de8208d334db";
+      fetchSubmodules = false;
+      sha256 = "sha256-BRifDs7gkHZuoxq5zoTyaB+qBac65/hCOswt/oQpLOY=";
+    };
+    date = "2025-05-14";
   };
 }
