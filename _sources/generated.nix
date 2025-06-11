@@ -39,7 +39,7 @@
     pname = "uosc-danmaku";
     version = "v1.3.1";
     src = fetchFromGitHub {
-      owner = "slqy123";
+      owner = "Tony15246";
       repo = "uosc_danmaku";
       rev = "v1.3.1";
       fetchSubmodules = false;

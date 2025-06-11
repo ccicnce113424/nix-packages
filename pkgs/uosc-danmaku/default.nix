@@ -28,8 +28,9 @@ buildLua (final: {
   passthru.scriptName = final.pname;
 
   meta = {
+    changelog = "https://github.com/Tony15246/uosc_danmaku/releases/tag/${final.version}";
     description = "在MPV播放器中加载弹弹play弹幕";
-    homepage = "https://github.com/slqy123/uosc_danmaku";
+    homepage = "https://github.com/Tony15246/uosc_danmaku";
     license = lib.licenses.mit;
     platforms = [ "x86_64-linux" ];
     sourceProvenance = with lib.sourceTypes; [

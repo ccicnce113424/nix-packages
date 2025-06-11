@@ -8,5 +8,5 @@ fetch.github = "akiirui/mpv-handler"
 src.github = "akiirui/mpv-handler"
 
 [uosc-danmaku]
-fetch.github = "slqy123/uosc_danmaku"
-src.github_tag = "slqy123/uosc_danmaku"
+fetch.github = "Tony15246/uosc_danmaku"
+src.github = "Tony15246/uosc_danmaku"
