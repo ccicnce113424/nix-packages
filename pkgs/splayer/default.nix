@@ -69,6 +69,7 @@ stdenv.mkDerivation (final: {
       startupWMClass = "SPlayer";
       comment = "A minimalist music player";
       categories = [
+        "AudioVideo"
         "Audio"
         "Music"
       ];
