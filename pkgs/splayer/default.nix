@@ -27,6 +27,10 @@ stdenv.mkDerivation (final: {
 
   env.ELECTRON_SKIP_BINARY_DOWNLOAD = true;
 
+  postConfigure = ''
+    cp .env.example .env
+  '';
+
   postBuild = ''
     pnpm build
 
