@@ -15,6 +15,10 @@ src.github = "akiirui/mpv-handler"
 fetch.github = "imsyy/SPlayer"
 src.github = "imsyy/SPlayer"
 
+[splayer-git]
+fetch.github = "imsyy/SPlayer"
+src.git = "https://github.com/imsyy/SPlayer"
+
 [uosc-danmaku]
 fetch.github = "Tony15246/uosc_danmaku"
 src.github = "Tony15246/uosc_danmaku"
