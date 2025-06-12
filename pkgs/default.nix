@@ -1,5 +1,5 @@
 {
-  pkgs ? import <nixpkgs>,
+  pkgs ? import <nixpkgs> { },
 }:
 let
   fetched-src = pkgs.callPackage ../_sources/generated.nix { };
