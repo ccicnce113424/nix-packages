@@ -13,11 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Update Sources
     steps:
-      - name: Purge unnecessary things
-        uses: wimpysworld/nothing-but-nix@main
-        with:
-          hatchet-protocol: "rampage"
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
