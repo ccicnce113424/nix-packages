@@ -2,4 +2,4 @@ builds:
   include:
     - "packages.*.*"
   exclude:
-    - "*wpsoffice*"
+    - "packages.*.wpsoffice*"
