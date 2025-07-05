@@ -24,10 +24,13 @@ rec {
 
   shijima-qt = pkgs.callPackage ./shijima-qt { };
 
+  inherit (pkgs) splayer;
+
   splayer-git = pkgs.callPackage ./splayer-git rec {
     hash = import ./splayer-git/hash-git.nix;
     sources = fetchedSrc.splayer-git;
     version = unstableVersion sources;
+    inherit splayer;
   };
 
   uosc-danmaku = pkgs.mpvScripts.callPackage ./uosc-danmaku rec {
