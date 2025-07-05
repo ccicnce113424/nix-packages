@@ -24,15 +24,8 @@ rec {
 
   shijima-qt = pkgs.callPackage ./shijima-qt { };
 
-  splayer = pkgs.callPackage ./splayer rec {
-    pnpm = pkgs.pnpm_10;
-    hash = import ./splayer/hash.nix;
-    sources = fetchedSrc.splayer;
-    version = stableVersion sources;
-  };
-  splayer-git = pkgs.callPackage ./splayer rec {
-    pnpm = pkgs.pnpm_10;
-    hash = import ./splayer/hash-git.nix;
+  splayer-git = pkgs.callPackage ./splayer-git rec {
+    hash = import ./splayer-git/hash-git.nix;
     sources = fetchedSrc.splayer-git;
     version = unstableVersion sources;
   };
