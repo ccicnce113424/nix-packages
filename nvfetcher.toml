@@ -25,6 +25,11 @@ cargo_locks = ["Cargo.lock"]
 fetch.github = "akiirui/mpv-handler"
 src.github = "akiirui/mpv-handler"
 
+[pixes]
+extract = ["pubspec.lock"]
+fetch.github = "wgh136/pixes"
+src.github = "wgh136/pixes"
+
 [splayer-git]
 fetch.github = "imsyy/SPlayer"
 src.git = "https://github.com/imsyy/SPlayer"

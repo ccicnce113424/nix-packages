@@ -29,6 +29,11 @@ rec {
     version = stableVersion sources;
   };
 
+  pixes = pkgs.callPackage ./pixes rec {
+    sources = fetchedSrc.pixes;
+    inherit (sources) version;
+  };
+
   shijima-qt = pkgs.callPackage ./shijima-qt { };
 
   inherit (pkgs) splayer;
