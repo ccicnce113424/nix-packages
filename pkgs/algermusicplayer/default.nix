@@ -20,13 +20,13 @@ appimageTools.wrapType2 rec {
       appimageContents = appimageTools.extract { inherit pname version src; };
     in
     ''
-      mkdir -p $out/share
-
       install -D ${appimageContents}/algermusicplayer.desktop $out/share/applications/algermusicplayer.desktop
       substituteInPlace $out/share/applications/algermusicplayer.desktop \
         --replace-fail 'Exec=AppRun' 'Exec=algermusicplayer'
 
-      cp -r ${appimageContents}/usr/share/icons $out/share
+      mkdir -p $out/share/pixmaps
+
+      cp -L ${appimageContents}/algermusicplayer.png $out/share/pixmaps/algermusicplayer.png
     '';
 
   meta = {
