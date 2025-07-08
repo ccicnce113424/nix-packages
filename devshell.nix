@@ -8,5 +8,6 @@ pkgs.mkShell.override { stdenv = pkgs.stdenvNoCC; } {
     nix-tree
     nix-output-monitor
     nvfetcher
+    jq
   ];
 }
