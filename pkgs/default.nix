@@ -22,6 +22,11 @@ rec {
     version = stableVersion sources;
   };
 
+  piliplus = pkgs.callPackage ./piliplus rec {
+    sources = fetchedSrc.piliplus;
+    version = sources.version;
+  };
+
   shijima-qt = pkgs.callPackage ./shijima-qt { };
 
   inherit (pkgs) splayer;

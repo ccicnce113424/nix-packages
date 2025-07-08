@@ -41,6 +41,18 @@
       };
     };
   };
+  piliplus = {
+    pname = "piliplus";
+    version = "1.1.3.39-fix3";
+    src = fetchFromGitHub {
+      owner = "bggRGjQaUbCoE";
+      repo = "PiliPlus";
+      rev = "1.1.3.39-fix3";
+      fetchSubmodules = false;
+      sha256 = "sha256-OIyIhlKjZcAOzNJXuZYxGM/GBfMuhY+kNy81i/kFGfw=";
+    };
+    "pubspec.lock" = builtins.readFile ./piliplus-1.1.3.39-fix3/pubspec.lock;
+  };
   splayer-git = {
     pname = "splayer-git";
     version = "bfcd59dacab07fd665e71a311c5fe8c0a3c548a7";
