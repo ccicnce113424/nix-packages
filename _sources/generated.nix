@@ -116,4 +116,12 @@
     };
     date = "2025-05-22";
   };
+  zhuque = {
+    pname = "zhuque";
+    version = "v0.212";
+    src = fetchurl {
+      url = "https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip";
+      sha256 = "sha256-u4tmGnZD0ilqctnRBTCgCUlBnE5Sf7YXg/c8K6GowGI=";
+    };
+  };
 }

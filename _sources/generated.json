@@ -191,5 +191,20 @@
       "type": "github"
     },
     "version": "1384036ea24a9bc38a5c684dac5122d5e3431ae6"
+  },
+  "zhuque": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "zhuque",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "name": null,
+      "sha256": "sha256-u4tmGnZD0ilqctnRBTCgCUlBnE5Sf7YXg/c8K6GowGI=",
+      "type": "url",
+      "url": "https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip"
+    },
+    "version": "v0.212"
   }
 }

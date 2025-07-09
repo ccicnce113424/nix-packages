@@ -61,4 +61,9 @@ rec {
         sources = fetchedSrc.vulkan-hdr-layer-kwin6;
         version = unstableVersion sources;
       };
+
+  zhuque = pkgs.callPackage ./zhuque rec {
+    sources = fetchedSrc.zhuque;
+    version = stableVersion sources;
+  };
 }
