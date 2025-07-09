@@ -44,6 +44,14 @@
     };
     date = "2025-05-18";
   };
+  lxgw-wenkai-gb = {
+    pname = "lxgw-wenkai-gb";
+    version = "v1.520";
+    src = fetchTarball {
+      url = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.520/lxgw-wenkai-gb-v1.520.tar.gz";
+      sha256 = "sha256-6dZDzz0PPG18x4DzUH/qzq+1grbNIDP6ZDJA4uAOwxc=";
+    };
+  };
   mpv-handler = {
     pname = "mpv-handler";
     version = "v0.3.16";

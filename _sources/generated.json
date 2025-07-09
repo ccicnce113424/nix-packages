@@ -71,6 +71,20 @@
     },
     "version": "40fe8916f8528f57a4a1ca245d043d5c4d2566eb"
   },
+  "lxgw-wenkai-gb": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "lxgw-wenkai-gb",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "sha256": "sha256-6dZDzz0PPG18x4DzUH/qzq+1grbNIDP6ZDJA4uAOwxc=",
+      "type": "tarball",
+      "url": "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.520/lxgw-wenkai-gb-v1.520.tar.gz"
+    },
+    "version": "v1.520"
+  },
   "mpv-handler": {
     "cargoLocks": {
       "Cargo.lock": ["./mpv-handler-v0.3.16/Cargo.lock", {}]

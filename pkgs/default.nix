@@ -19,6 +19,11 @@ rec {
     version = unstableVersion sources;
   };
 
+  lxgw-wenkai-gb = pkgs.callPackage ./lxgw-wenkai-gb rec {
+    sources = fetchedSrc.lxgw-wenkai-gb;
+    version = stableVersion sources;
+  };
+
   mpv-handler = pkgs.callPackage ./mpv-handler rec {
     sources = fetchedSrc.mpv-handler;
     version = stableVersion sources;

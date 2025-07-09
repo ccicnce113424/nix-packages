@@ -16,6 +16,10 @@ src.github = "hihkm/DanmakuFactory"
 fetch.github = "hihkm/DanmakuFactory"
 src.git = "https://github.com/hihkm/DanmakuFactory"
 
+[lxgw-wenkai-gb]
+fetch.tarball = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/$ver/lxgw-wenkai-gb-$ver.tar.gz"
+src.github = "lxgw/LxgwWenkaiGB"
+
 [mpv-handler]
 cargo_locks = ["Cargo.lock"]
 fetch.github = "akiirui/mpv-handler"
