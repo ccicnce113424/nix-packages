@@ -3,6 +3,8 @@
   version,
   lib,
   buildLua,
+  upx,
+  autoPatchelfHook,
   danmakufactory,
   opencc,
 }:
@@ -13,6 +15,11 @@ buildLua (final: {
   scriptName = "uosc_danmaku";
   scriptPath = ".";
   passthru.scriptName = final.scriptName;
+
+  nativeBuildInputs = [
+    upx
+    autoPatchelfHook
+  ];
 
   fixupPhase = ''
     runHook preFixup
@@ -25,6 +32,7 @@ buildLua (final: {
     ln -sf ${opencc}/bin/opencc $out/share/mpv/scripts/${final.scriptName}/bin/OpenCC_Linux
 
     rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/dandanplay/dandanplay.exe
+    upx -d $out/share/mpv/scripts/${final.scriptName}/bin/dandanplay/dandanplay
 
     runHook postFixup
   '';
