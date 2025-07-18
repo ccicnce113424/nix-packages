@@ -18,7 +18,7 @@ flutter332.buildFlutterApplication rec {
       name = "pixes";
       desktopName = "Pixes";
       genericName = "Pixes";
-      exec = "pixes";
+      exec = "pixes %u";
       comment = "Unofficial pixiv application";
       terminal = false;
       categories = [ "Utility" ];
