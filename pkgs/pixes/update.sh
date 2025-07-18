@@ -4,7 +4,7 @@ lock_file=pkgs/pixes/pubspec.lock.json
 git_hashes=pkgs/pixes/git-hashes.nix
 lock_path=$(jq -r '.pixes.extract."pubspec.lock"' _sources/generated.json)
 
-cat _sources/$lock_path | yq >$lock_file
+yq <_sources/$lock_path >$lock_file
 
 echo "{" >"$git_hashes"
 
