@@ -2,6 +2,7 @@
 {
   fetchurl,
   fetchFromGitHub,
+  dockerTools,
 }:
 {
   algermusicplayer-arm = {
