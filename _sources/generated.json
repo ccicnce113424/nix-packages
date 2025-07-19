@@ -131,6 +131,29 @@
     },
     "version": "v1.1.1"
   },
+  "pixes-git": {
+    "cargoLocks": null,
+    "date": "2025-06-28",
+    "extract": {
+      "pubspec.lock": "./pixes-git-72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc/pubspec.lock"
+    },
+    "name": "pixes-git",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "wgh136",
+      "repo": "pixes",
+      "rev": "72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc",
+      "sha256": "sha256-MOdaYS02qoDSc86ZgyYtGNJ2BlcEaPEFCoyC0GQr6lo=",
+      "sparseCheckout": [],
+      "type": "github"
+    },
+    "version": "72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc"
+  },
   "splayer-git": {
     "cargoLocks": null,
     "date": "2025-05-23",

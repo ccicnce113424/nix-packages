@@ -81,6 +81,20 @@
     };
     "pubspec.lock" = builtins.readFile ./pixes-v1.1.1/pubspec.lock;
   };
+  pixes-git = {
+    pname = "pixes-git";
+    version = "72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc";
+    src = fetchFromGitHub {
+      owner = "wgh136";
+      repo = "pixes";
+      rev = "72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc";
+      fetchSubmodules = false;
+      sha256 = "sha256-MOdaYS02qoDSc86ZgyYtGNJ2BlcEaPEFCoyC0GQr6lo=";
+    };
+    "pubspec.lock" =
+      builtins.readFile ./pixes-git-72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc/pubspec.lock;
+    date = "2025-06-28";
+  };
   splayer-git = {
     pname = "splayer-git";
     version = "bfcd59dacab07fd665e71a311c5fe8c0a3c548a7";

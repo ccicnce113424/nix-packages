@@ -30,6 +30,11 @@ extract = ["pubspec.lock"]
 fetch.github = "wgh136/pixes"
 src.github = "wgh136/pixes"
 
+[pixes-git]
+extract = ["pubspec.lock"]
+fetch.github = "wgh136/pixes"
+src.git = "https://github.com/wgh136/pixes"
+
 [splayer-git]
 fetch.github = "imsyy/SPlayer"
 src.git = "https://github.com/imsyy/SPlayer"

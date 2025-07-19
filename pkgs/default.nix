@@ -31,7 +31,16 @@ rec {
 
   pixes = pkgs.callPackage ./pixes rec {
     sources = fetchedSrc.pixes;
-    inherit (sources) version;
+    version = stableVersion sources;
+    pubspecLock = builtins.fromJSON (builtins.readFile ./pixes/pubspec.lock.json);
+    gitHashes = import ./pixes/git-hashes.nix;
+  };
+
+  pixes-git = pkgs.callPackage ./pixes rec {
+    sources = fetchedSrc.pixes-git;
+    version = unstableVersion sources;
+    pubspecLock = builtins.fromJSON (builtins.readFile ./pixes/git/pubspec.lock.json);
+    gitHashes = import ./pixes/git/git-hashes.nix;
   };
 
   shijima-qt = pkgs.callPackage ./shijima-qt { };

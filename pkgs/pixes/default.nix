@@ -1,17 +1,17 @@
 {
   sources,
   version,
+  pubspecLock,
+  gitHashes,
   lib,
   flutter332,
   makeDesktopItem,
   copyDesktopItems,
 }:
 
-flutter332.buildFlutterApplication rec {
+flutter332.buildFlutterApplication {
   inherit (sources) pname src;
-  inherit version;
-
-  pubspecLock = lib.importJSON ./pubspec.lock.json;
+  inherit version pubspecLock gitHashes;
 
   desktopItems = [
     (makeDesktopItem {
@@ -37,8 +37,6 @@ flutter332.buildFlutterApplication rec {
     copyDesktopItems
   ];
 
-  gitHashes = import ./git-hashes.nix;
-
   postInstall = ''
     install -D debian/gui/pixes.png $out/share/pixmaps/pixes.png
   '';
@@ -46,7 +44,6 @@ flutter332.buildFlutterApplication rec {
   meta = {
     description = "Unofficial pixiv app";
     homepage = "https://github.com/wgh136/pixes";
-    changelog = meta.homepage + "/releases/tag/v${version}";
     mainProgram = "pixes";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ ccicnce113424 ];
