@@ -5,7 +5,7 @@ pkgs.mkShell.override { stdenv = pkgs.stdenvNoCC; } {
     nixd
     nil
     nix-prefetch-git
-    nixfmt-rfc-style
+    nixfmt
     nix-tree
     nix-output-monitor
     nvfetcher
