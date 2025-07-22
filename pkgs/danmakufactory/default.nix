@@ -3,11 +3,13 @@
   version,
   lib,
   stdenv,
-  ...
+  cmake,
 }:
-stdenv.mkDerivation (_final: {
+stdenv.mkDerivation {
   inherit (sources) pname src;
   inherit version;
+
+  nativeBuildInputs = [ cmake ];
 
   installPhase = ''
     runHook preInstall
@@ -24,4 +26,4 @@ stdenv.mkDerivation (_final: {
     maintainers = with lib.maintainers; [ ccicnce113424 ];
     mainProgram = "DanmakuFactory";
   };
-})
+}
