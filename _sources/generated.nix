@@ -33,15 +33,15 @@
   };
   danmakufactory-git = {
     pname = "danmakufactory-git";
-    version = "40fe8916f8528f57a4a1ca245d043d5c4d2566eb";
+    version = "ac0905d1c25484db1b39332d8abb69a052764ad4";
     src = fetchFromGitHub {
       owner = "hihkm";
       repo = "DanmakuFactory";
-      rev = "40fe8916f8528f57a4a1ca245d043d5c4d2566eb";
-      fetchSubmodules = false;
-      sha256 = "sha256-fxp0lmvIQU7WRs0IkZHpvG73PkgAdiDMQvrGHWSsSqI=";
+      rev = "ac0905d1c25484db1b39332d8abb69a052764ad4";
+      fetchSubmodules = true;
+      sha256 = "sha256-LZfjSmm3KtV7FAexpxXOTU3HLlFApvZHWY7U1KueGlA=";
     };
-    date = "2025-05-18";
+    date = "2025-07-21";
   };
   lxgw-wenkai-gb = {
     pname = "lxgw-wenkai-gb";
