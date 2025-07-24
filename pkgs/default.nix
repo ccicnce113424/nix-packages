@@ -55,12 +55,10 @@ rec {
   };
 
   uosc-danmaku = pkgs.mpvScripts.callPackage ./uosc-danmaku rec {
-    inherit danmakufactory;
     sources = fetchedSrc.uosc-danmaku;
     version = stableVersion sources;
   };
   uosc-danmaku-git = pkgs.mpvScripts.callPackage ./uosc-danmaku rec {
-    danmakufactory = danmakufactory-git;
     sources = fetchedSrc.uosc-danmaku-git;
     version = unstableVersion sources;
   };

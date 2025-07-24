@@ -5,8 +5,6 @@
   buildLua,
   upx,
   autoPatchelfHook,
-  danmakufactory,
-  opencc,
 }:
 buildLua (final: {
   inherit (sources) pname src;
@@ -23,13 +21,6 @@ buildLua (final: {
 
   fixupPhase = ''
     runHook preFixup
-
-    rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/DanmakuFactory/*
-    ln -sf ${danmakufactory}/bin/DanmakuFactory $out/share/mpv/scripts/${final.scriptName}/bin/DanmakuFactory
-
-    rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/OpenCC_Windows
-    rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/OpenCC_Linux/*
-    ln -sf ${opencc}/bin/opencc $out/share/mpv/scripts/${final.scriptName}/bin/OpenCC_Linux
 
     rm -rf $out/share/mpv/scripts/${final.scriptName}/bin/dandanplay/dandanplay.exe
     upx -d $out/share/mpv/scripts/${final.scriptName}/bin/dandanplay/dandanplay
