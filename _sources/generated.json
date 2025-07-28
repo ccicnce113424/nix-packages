@@ -52,7 +52,7 @@
   },
   "danmakufactory-git": {
     "cargoLocks": null,
-    "date": "2025-07-25",
+    "date": "2025-07-27",
     "extract": null,
     "name": "danmakufactory-git",
     "passthru": null,
@@ -64,12 +64,12 @@
       "name": null,
       "owner": "hihkm",
       "repo": "DanmakuFactory",
-      "rev": "647c7e6d5bc7c57c215846c0be9ccbc54c7f8ad4",
-      "sha256": "sha256-xm+kYLIlC5pTRgbxyX4IU4jBmj1Ip33S6VN3W5JxSs0=",
+      "rev": "e16f1ce4984008c6f6b77947894d1aca0c71226c",
+      "sha256": "sha256-78mn3NgyPzPVdp6lctgMSVve4edWU0Vcgwncf+fYM1k=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "647c7e6d5bc7c57c215846c0be9ccbc54c7f8ad4"
+    "version": "e16f1ce4984008c6f6b77947894d1aca0c71226c"
   },
   "lxgw-wenkai-gb": {
     "cargoLocks": null,
