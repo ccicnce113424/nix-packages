@@ -131,15 +131,15 @@
   };
   vulkan-hdr-layer-kwin6 = {
     pname = "vulkan-hdr-layer-kwin6";
-    version = "1384036ea24a9bc38a5c684dac5122d5e3431ae6";
+    version = "303e0c69e1d33acd95158d92b1fc652fb5b85399";
     src = fetchFromGitHub {
       owner = "Zamundaaa";
       repo = "VK_hdr_layer";
-      rev = "1384036ea24a9bc38a5c684dac5122d5e3431ae6";
+      rev = "303e0c69e1d33acd95158d92b1fc652fb5b85399";
       fetchSubmodules = true;
-      sha256 = "sha256-xm0S1vLE8MAov8gf6rN5ZKZAe6NMKfHDlUlmNd332qw=";
+      sha256 = "sha256-NsC44Ifl/fAHvFqP7NLrVZ71Y+x5mBEkv+r43HN5yn4=";
     };
-    date = "2025-05-22";
+    date = "2025-07-31";
   };
   zhuque = {
     pname = "zhuque";
