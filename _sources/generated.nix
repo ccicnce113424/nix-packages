@@ -119,15 +119,15 @@
   };
   uosc-danmaku-git = {
     pname = "uosc-danmaku-git";
-    version = "4b61db7b5913e9bd6ca3ce4ec9e3d31b213ca42e";
+    version = "df7a07297e6d00f497b46a0cef351a8551bef7e3";
     src = fetchFromGitHub {
       owner = "Tony15246";
       repo = "uosc_danmaku";
-      rev = "4b61db7b5913e9bd6ca3ce4ec9e3d31b213ca42e";
+      rev = "df7a07297e6d00f497b46a0cef351a8551bef7e3";
       fetchSubmodules = false;
-      sha256 = "sha256-orcKzasFh6oM5dqK09vp64gP4JNoyWJPWGDsg2FDoAI=";
+      sha256 = "sha256-4slXw8Zs8mk024WMxSUdYINr41XFPGTRc+7y5OENbig=";
     };
-    date = "2025-07-30";
+    date = "2025-08-01";
   };
   vulkan-hdr-layer-kwin6 = {
     pname = "vulkan-hdr-layer-kwin6";
