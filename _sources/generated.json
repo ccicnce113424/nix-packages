@@ -133,9 +133,9 @@
   },
   "pixes-git": {
     "cargoLocks": null,
-    "date": "2025-06-28",
+    "date": "2025-08-03",
     "extract": {
-      "pubspec.lock": "./pixes-git-72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc/pubspec.lock"
+      "pubspec.lock": "./pixes-git-5dad6910fc77f76b74ce510ed069e7a8ed37a9cf/pubspec.lock"
     },
     "name": "pixes-git",
     "passthru": null,
@@ -147,12 +147,12 @@
       "name": null,
       "owner": "wgh136",
       "repo": "pixes",
-      "rev": "72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc",
-      "sha256": "sha256-MOdaYS02qoDSc86ZgyYtGNJ2BlcEaPEFCoyC0GQr6lo=",
+      "rev": "5dad6910fc77f76b74ce510ed069e7a8ed37a9cf",
+      "sha256": "sha256-WNE6UdALHyz0voiZPscBA9yprPA7Ed1lighg0RJK06Q=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "72eb4a51eada9fdd5613de9d55b13d2fcac4bbcc"
+    "version": "5dad6910fc77f76b74ce510ed069e7a8ed37a9cf"
   },
   "splayer-git": {
     "cargoLocks": null,
@@ -198,7 +198,7 @@
   },
   "uosc-danmaku-git": {
     "cargoLocks": null,
-    "date": "2025-08-01",
+    "date": "2025-08-03",
     "extract": null,
     "name": "uosc-danmaku-git",
     "passthru": null,
@@ -210,12 +210,12 @@
       "name": null,
       "owner": "Tony15246",
       "repo": "uosc_danmaku",
-      "rev": "df7a07297e6d00f497b46a0cef351a8551bef7e3",
-      "sha256": "sha256-4slXw8Zs8mk024WMxSUdYINr41XFPGTRc+7y5OENbig=",
+      "rev": "658b96c5c3f6f43343ed5b17e36117ec31efb682",
+      "sha256": "sha256-1A9KxLJ2FvRR53W2koTd0K9BennSiNd8KJVt8I5rRxg=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "df7a07297e6d00f497b46a0cef351a8551bef7e3"
+    "version": "658b96c5c3f6f43343ed5b17e36117ec31efb682"
   },
   "vulkan-hdr-layer-kwin6": {
     "cargoLocks": null,
