@@ -43,6 +43,14 @@
     };
     date = "2025-07-27";
   };
+  hikariii = {
+    pname = "hikariii";
+    version = "2025.803.0";
+    src = fetchurl {
+      url = "https://github.com/MATRIX-feather/LLin/releases/download/2025.803.0/Hikariii.Desktop.zip";
+      sha256 = "sha256-dCoT+9OPt6tVnTMsQZvcwEe+FGrPvnvTvkjTxrzvBOk=";
+    };
+  };
   lxgw-wenkai-gb = {
     pname = "lxgw-wenkai-gb";
     version = "v1.520";

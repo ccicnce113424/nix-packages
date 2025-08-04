@@ -71,6 +71,21 @@
     },
     "version": "e16f1ce4984008c6f6b77947894d1aca0c71226c"
   },
+  "hikariii": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "hikariii",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "name": null,
+      "sha256": "sha256-dCoT+9OPt6tVnTMsQZvcwEe+FGrPvnvTvkjTxrzvBOk=",
+      "type": "url",
+      "url": "https://github.com/MATRIX-feather/LLin/releases/download/2025.803.0/Hikariii.Desktop.zip"
+    },
+    "version": "2025.803.0"
+  },
   "lxgw-wenkai-gb": {
     "cargoLocks": null,
     "date": null,

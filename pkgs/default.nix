@@ -19,6 +19,8 @@ rec {
     version = unstableVersion sources;
   };
 
+  hikariii = fetchedSrc.hikariii.src;
+
   lxgw-wenkai-gb = pkgs.callPackage ./lxgw-wenkai-gb rec {
     sources = fetchedSrc.lxgw-wenkai-gb;
     version = stableVersion sources;

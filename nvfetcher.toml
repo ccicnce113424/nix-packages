@@ -17,6 +17,10 @@ fetch.github = "hihkm/DanmakuFactory"
 git.fetchSubmodules = true
 src.git = "https://github.com/hihkm/DanmakuFactory"
 
+[hikariii]
+fetch.url = "https://github.com/MATRIX-feather/LLin/releases/download/$ver/Hikariii.Desktop.zip"
+src.github = "MATRIX-feather/LLin"
+
 [lxgw-wenkai-gb]
 fetch.tarball = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/$ver/lxgw-wenkai-gb-$ver.tar.gz"
 src.github = "lxgw/LxgwWenkaiGB"
