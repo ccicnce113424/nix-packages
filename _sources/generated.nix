@@ -6,18 +6,18 @@
 {
   algermusicplayer-arm = {
     pname = "algermusicplayer-arm";
-    version = "4.8.2";
+    version = "4.9.0";
     src = fetchurl {
-      url = "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.2/AlgerMusicPlayer-4.8.2-linux-arm64.AppImage";
-      sha256 = "sha256-V+pCKDC1cCD7wxuQ9wRYFVfVg2Ltevawkgo6dk9jIDE=";
+      url = "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.9.0/AlgerMusicPlayer-4.9.0-linux-arm64.AppImage";
+      sha256 = "sha256-Evuh6HQhubA4WrQlVot+BCD2avrqpJaxz/L3+AB7sRc=";
     };
   };
   algermusicplayer-x86 = {
     pname = "algermusicplayer-x86";
-    version = "4.8.2";
+    version = "4.9.0";
     src = fetchurl {
-      url = "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.2/AlgerMusicPlayer-4.8.2-linux-x86_64.AppImage";
-      sha256 = "sha256-T0G/jc3foW3a/opUKybU4HkGKqPEkxNy8JppC8bwyR4=";
+      url = "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.9.0/AlgerMusicPlayer-4.9.0-linux-x86_64.AppImage";
+      sha256 = "sha256-fY8lobsRg2nDENYDY3R81zJ2x0Fr29vJccrelbdggmg=";
     };
   };
   danmakufactory = {
@@ -119,15 +119,15 @@
   };
   uosc-danmaku-git = {
     pname = "uosc-danmaku-git";
-    version = "feb8db54a322f749d4c0bfa95969d7aff505a1ec";
+    version = "4c5cacd84a45005811572bcfb745c594e8f5d83b";
     src = fetchFromGitHub {
       owner = "Tony15246";
       repo = "uosc_danmaku";
-      rev = "feb8db54a322f749d4c0bfa95969d7aff505a1ec";
+      rev = "4c5cacd84a45005811572bcfb745c594e8f5d83b";
       fetchSubmodules = false;
-      sha256 = "sha256-yPz4kSIMyXw7unqz2vUmE7XTrsxEQjTz+EXHTyZfyhw=";
+      sha256 = "sha256-g6Xxtz66xhCCG/t0s2ygP1dYnxD+pIKwMkyswhzbPpU=";
     };
-    date = "2025-08-06";
+    date = "2025-08-08";
   };
   vulkan-hdr-layer-kwin6 = {
     pname = "vulkan-hdr-layer-kwin6";
