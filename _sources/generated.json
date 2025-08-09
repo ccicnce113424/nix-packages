@@ -8,11 +8,11 @@
     "pinned": false,
     "src": {
       "name": null,
-      "sha256": "sha256-V+pCKDC1cCD7wxuQ9wRYFVfVg2Ltevawkgo6dk9jIDE=",
+      "sha256": "sha256-Evuh6HQhubA4WrQlVot+BCD2avrqpJaxz/L3+AB7sRc=",
       "type": "url",
-      "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.2/AlgerMusicPlayer-4.8.2-linux-arm64.AppImage"
+      "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.9.0/AlgerMusicPlayer-4.9.0-linux-arm64.AppImage"
     },
-    "version": "4.8.2"
+    "version": "4.9.0"
   },
   "algermusicplayer-x86": {
     "cargoLocks": null,
@@ -23,11 +23,11 @@
     "pinned": false,
     "src": {
       "name": null,
-      "sha256": "sha256-T0G/jc3foW3a/opUKybU4HkGKqPEkxNy8JppC8bwyR4=",
+      "sha256": "sha256-fY8lobsRg2nDENYDY3R81zJ2x0Fr29vJccrelbdggmg=",
       "type": "url",
-      "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.2/AlgerMusicPlayer-4.8.2-linux-x86_64.AppImage"
+      "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.9.0/AlgerMusicPlayer-4.9.0-linux-x86_64.AppImage"
     },
-    "version": "4.8.2"
+    "version": "4.9.0"
   },
   "danmakufactory": {
     "cargoLocks": null,
@@ -198,7 +198,7 @@
   },
   "uosc-danmaku-git": {
     "cargoLocks": null,
-    "date": "2025-08-06",
+    "date": "2025-08-08",
     "extract": null,
     "name": "uosc-danmaku-git",
     "passthru": null,
@@ -210,12 +210,12 @@
       "name": null,
       "owner": "Tony15246",
       "repo": "uosc_danmaku",
-      "rev": "feb8db54a322f749d4c0bfa95969d7aff505a1ec",
-      "sha256": "sha256-yPz4kSIMyXw7unqz2vUmE7XTrsxEQjTz+EXHTyZfyhw=",
+      "rev": "4c5cacd84a45005811572bcfb745c594e8f5d83b",
+      "sha256": "sha256-g6Xxtz66xhCCG/t0s2ygP1dYnxD+pIKwMkyswhzbPpU=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "feb8db54a322f749d4c0bfa95969d7aff505a1ec"
+    "version": "4c5cacd84a45005811572bcfb745c594e8f5d83b"
   },
   "vulkan-hdr-layer-kwin6": {
     "cargoLocks": null,
