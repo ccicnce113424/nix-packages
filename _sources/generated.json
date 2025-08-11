@@ -112,7 +112,7 @@
     "cargoLocks": null,
     "date": null,
     "extract": {
-      "pubspec.lock": "./pixes-v1.1.1/pubspec.lock"
+      "pubspec.lock": "./pixes-v1.2.0/pubspec.lock"
     },
     "name": "pixes",
     "passthru": null,
@@ -124,18 +124,18 @@
       "name": null,
       "owner": "wgh136",
       "repo": "pixes",
-      "rev": "v1.1.1",
-      "sha256": "sha256-kmbinF4jCelqDkjxAKxnaO+GrIdX9GBHKqaykpPsCGo=",
+      "rev": "v1.2.0",
+      "sha256": "sha256-J6ap9kuiRyjZQHW5z4LyM9ww2FCDmgv5+qML5/YldNA=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "v1.1.1"
+    "version": "v1.2.0"
   },
   "pixes-git": {
     "cargoLocks": null,
-    "date": "2025-08-03",
+    "date": "2025-08-10",
     "extract": {
-      "pubspec.lock": "./pixes-git-5dad6910fc77f76b74ce510ed069e7a8ed37a9cf/pubspec.lock"
+      "pubspec.lock": "./pixes-git-558832d188014bff1b388232f453c269b8fdfaf7/pubspec.lock"
     },
     "name": "pixes-git",
     "passthru": null,
@@ -147,12 +147,12 @@
       "name": null,
       "owner": "wgh136",
       "repo": "pixes",
-      "rev": "5dad6910fc77f76b74ce510ed069e7a8ed37a9cf",
-      "sha256": "sha256-WNE6UdALHyz0voiZPscBA9yprPA7Ed1lighg0RJK06Q=",
+      "rev": "558832d188014bff1b388232f453c269b8fdfaf7",
+      "sha256": "sha256-J6ap9kuiRyjZQHW5z4LyM9ww2FCDmgv5+qML5/YldNA=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "5dad6910fc77f76b74ce510ed069e7a8ed37a9cf"
+    "version": "558832d188014bff1b388232f453c269b8fdfaf7"
   },
   "splayer-git": {
     "cargoLocks": null,
