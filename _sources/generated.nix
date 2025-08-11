@@ -70,29 +70,29 @@
   };
   pixes = {
     pname = "pixes";
-    version = "v1.1.1";
+    version = "v1.2.0";
     src = fetchFromGitHub {
       owner = "wgh136";
       repo = "pixes";
-      rev = "v1.1.1";
+      rev = "v1.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-kmbinF4jCelqDkjxAKxnaO+GrIdX9GBHKqaykpPsCGo=";
+      sha256 = "sha256-J6ap9kuiRyjZQHW5z4LyM9ww2FCDmgv5+qML5/YldNA=";
     };
-    "pubspec.lock" = builtins.readFile ./pixes-v1.1.1/pubspec.lock;
+    "pubspec.lock" = builtins.readFile ./pixes-v1.2.0/pubspec.lock;
   };
   pixes-git = {
     pname = "pixes-git";
-    version = "5dad6910fc77f76b74ce510ed069e7a8ed37a9cf";
+    version = "558832d188014bff1b388232f453c269b8fdfaf7";
     src = fetchFromGitHub {
       owner = "wgh136";
       repo = "pixes";
-      rev = "5dad6910fc77f76b74ce510ed069e7a8ed37a9cf";
+      rev = "558832d188014bff1b388232f453c269b8fdfaf7";
       fetchSubmodules = false;
-      sha256 = "sha256-WNE6UdALHyz0voiZPscBA9yprPA7Ed1lighg0RJK06Q=";
+      sha256 = "sha256-J6ap9kuiRyjZQHW5z4LyM9ww2FCDmgv5+qML5/YldNA=";
     };
     "pubspec.lock" =
-      builtins.readFile ./pixes-git-5dad6910fc77f76b74ce510ed069e7a8ed37a9cf/pubspec.lock;
-    date = "2025-08-03";
+      builtins.readFile ./pixes-git-558832d188014bff1b388232f453c269b8fdfaf7/pubspec.lock;
+    date = "2025-08-10";
   };
   splayer-git = {
     pname = "splayer-git";
