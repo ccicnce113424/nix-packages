@@ -198,7 +198,7 @@
   },
   "uosc-danmaku-git": {
     "cargoLocks": null,
-    "date": "2025-08-08",
+    "date": "2025-08-18",
     "extract": null,
     "name": "uosc-danmaku-git",
     "passthru": null,
@@ -210,12 +210,12 @@
       "name": null,
       "owner": "Tony15246",
       "repo": "uosc_danmaku",
-      "rev": "4c5cacd84a45005811572bcfb745c594e8f5d83b",
-      "sha256": "sha256-g6Xxtz66xhCCG/t0s2ygP1dYnxD+pIKwMkyswhzbPpU=",
+      "rev": "0dcd8ad96e3c3fbca619e405258faf2b52aab671",
+      "sha256": "sha256-X+gxdpt2TY79b8VxkIcwltH5DT6ptUL2B+06cFbewXs=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "4c5cacd84a45005811572bcfb745c594e8f5d83b"
+    "version": "0dcd8ad96e3c3fbca619e405258faf2b52aab671"
   },
   "vulkan-hdr-layer-kwin6": {
     "cargoLocks": null,
