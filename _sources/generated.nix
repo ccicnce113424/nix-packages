@@ -33,15 +33,15 @@
   };
   danmakufactory-git = {
     pname = "danmakufactory-git";
-    version = "65de8c391a1f3b26175dca9997da411227081bf7";
+    version = "0bb5b3c2ffd9984ddf6367c4c6be58a82eef776a";
     src = fetchFromGitHub {
       owner = "hihkm";
       repo = "DanmakuFactory";
-      rev = "65de8c391a1f3b26175dca9997da411227081bf7";
+      rev = "0bb5b3c2ffd9984ddf6367c4c6be58a82eef776a";
       fetchSubmodules = true;
-      sha256 = "sha256-ULRMrE/VN1uZ9ZZ3DctGvc0DxGhUnhNMVGooyQ8sQuA=";
+      sha256 = "sha256-MmMKualG3SpjAtED5sx3buH/Fb4DOpcqXFUFxyjrEEc=";
     };
-    date = "2025-08-12";
+    date = "2025-08-24";
   };
   lxgw-wenkai-gb = {
     pname = "lxgw-wenkai-gb";
@@ -119,15 +119,15 @@
   };
   uosc-danmaku-git = {
     pname = "uosc-danmaku-git";
-    version = "0dcd8ad96e3c3fbca619e405258faf2b52aab671";
+    version = "80b2c58c225a3c2d6f1f61da6636dc46083cd1b1";
     src = fetchFromGitHub {
       owner = "Tony15246";
       repo = "uosc_danmaku";
-      rev = "0dcd8ad96e3c3fbca619e405258faf2b52aab671";
+      rev = "80b2c58c225a3c2d6f1f61da6636dc46083cd1b1";
       fetchSubmodules = false;
-      sha256 = "sha256-X+gxdpt2TY79b8VxkIcwltH5DT6ptUL2B+06cFbewXs=";
+      sha256 = "sha256-GPcoMCCdZkzgIAPawU92EZnV5LagoH3qJk1w/W07Xdc=";
     };
-    date = "2025-08-18";
+    date = "2025-08-24";
   };
   vulkan-hdr-layer-kwin6 = {
     pname = "vulkan-hdr-layer-kwin6";
