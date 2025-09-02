@@ -64,12 +64,12 @@
       "name": null,
       "owner": "hihkm",
       "repo": "DanmakuFactory",
-      "rev": "e41bbbcd6111bc12d82dde3dde75f9f9d99a9d16",
-      "sha256": "sha256-Xagd15fObdBPzDt8sn9oLF8zrqf2smnCqmEgNuYWfjg=",
+      "rev": "4bb8774ae4eaab686819677e87f7c021f4a14933",
+      "sha256": "sha256-sz0aergZLbtJx32LVLVzSdUZyLImD57ERbPr6q4g5JY=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "e41bbbcd6111bc12d82dde3dde75f9f9d99a9d16"
+    "version": "4bb8774ae4eaab686819677e87f7c021f4a14933"
   },
   "lxgw-wenkai-gb": {
     "cargoLocks": null,
