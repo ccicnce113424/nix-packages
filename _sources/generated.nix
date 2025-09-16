@@ -96,15 +96,15 @@
   };
   splayer-git = {
     pname = "splayer-git";
-    version = "b2ddb9f4e292144d79d4574d3b32b0dddc1b7c71";
+    version = "8e88bf64b1727d141c1f3d9eba035c4dc562af6f";
     src = fetchFromGitHub {
       owner = "imsyy";
       repo = "SPlayer";
-      rev = "b2ddb9f4e292144d79d4574d3b32b0dddc1b7c71";
+      rev = "8e88bf64b1727d141c1f3d9eba035c4dc562af6f";
       fetchSubmodules = false;
-      sha256 = "sha256-LoSxVLKqhvjfOeRV1tjkRrGrLAlfjQuA7Zugh3N6300=";
+      sha256 = "sha256-NGkdHOBAXbTlZFh+THXM1Yi53EX33sC5ujoMg0hIiGE=";
     };
-    date = "2025-08-20";
+    date = "2025-09-15";
   };
   uosc-danmaku = {
     pname = "uosc-danmaku";
