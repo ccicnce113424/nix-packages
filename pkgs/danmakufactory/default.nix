@@ -11,6 +11,8 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ cmake ];
 
+  cmakeFlags = [ (lib.strings.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.5") ];
+
   installPhase = ''
     runHook preInstall
 
