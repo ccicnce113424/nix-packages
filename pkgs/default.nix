@@ -62,7 +62,7 @@ rec {
     sources = fetchedSrc.uosc-danmaku;
     version = stableVersion sources;
   };
-  uosc-danmaku-git = pkgs.mpvScripts.callPackage ./uosc-danmaku-git rec {
+  uosc-danmaku-git = pkgs.mpvScripts.callPackage ./uosc-danmaku rec {
     sources = fetchedSrc.uosc-danmaku-git;
     version = unstableVersion sources;
   };
