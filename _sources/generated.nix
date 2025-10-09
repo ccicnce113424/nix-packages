@@ -53,16 +53,16 @@
   };
   mpv-handler = {
     pname = "mpv-handler";
-    version = "v0.3.16";
+    version = "v0.4.1";
     src = fetchFromGitHub {
       owner = "akiirui";
       repo = "mpv-handler";
-      rev = "v0.3.16";
+      rev = "v0.4.1";
       fetchSubmodules = false;
-      sha256 = "sha256-RpfHUVZmhtneeu8PIfxinYG3/groJPA9QveDSvzU6Zo=";
+      sha256 = "sha256-uWV9pjZp5s8H1UDS/T0JK//eJNnsaaby88l/tDqlQHY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./mpv-handler-v0.3.16/Cargo.lock;
+      lockFile = ./mpv-handler-v0.4.1/Cargo.lock;
       outputHashes = {
 
       };
