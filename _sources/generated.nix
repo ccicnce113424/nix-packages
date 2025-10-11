@@ -45,10 +45,10 @@
   };
   lxgw-wenkai-gb = {
     pname = "lxgw-wenkai-gb";
-    version = "v1.520";
+    version = "v1.521";
     src = fetchTarball {
-      url = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.520/lxgw-wenkai-gb-v1.520.tar.gz";
-      sha256 = "sha256-6dZDzz0PPG18x4DzUH/qzq+1grbNIDP6ZDJA4uAOwxc=";
+      url = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.521/lxgw-wenkai-gb-v1.521.tar.gz";
+      sha256 = "sha256-sryAhrDy/nayJTxSmiI41ULp1rVyjIBArJaIT1DOp54=";
     };
   };
   mpv-handler = {
@@ -119,15 +119,15 @@
   };
   uosc-danmaku-git = {
     pname = "uosc-danmaku-git";
-    version = "c1af5160bbddb506ab0b1b719c430b1dae791afe";
+    version = "732128cdd90b13bcd65ebd51fa8929d3e0e5cfac";
     src = fetchFromGitHub {
       owner = "Tony15246";
       repo = "uosc_danmaku";
-      rev = "c1af5160bbddb506ab0b1b719c430b1dae791afe";
+      rev = "732128cdd90b13bcd65ebd51fa8929d3e0e5cfac";
       fetchSubmodules = false;
-      sha256 = "sha256-50a4FmnrDP/gRYLIXC+B+f9PPH7X2lPD8YlF0mJsNnA=";
+      sha256 = "sha256-Qs6NLZqY7iY6KtZuuHHYD1maqMMesq4GLg8uwzzVmVU=";
     };
-    date = "2025-10-07";
+    date = "2025-10-10";
   };
   vulkan-hdr-layer-kwin6 = {
     pname = "vulkan-hdr-layer-kwin6";
