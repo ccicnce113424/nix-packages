@@ -26,6 +26,11 @@ cargo_locks = ["Cargo.lock"]
 fetch.github = "akiirui/mpv-handler"
 src.github = "akiirui/mpv-handler"
 
+[piliplus]
+extract = ["pubspec.lock"]
+fetch.github = "bggRGjQaUbCoE/PiliPlus"
+src.github = "bggRGjQaUbCoE/PiliPlus"
+
 [pixes]
 extract = ["pubspec.lock"]
 fetch.github = "wgh136/pixes"

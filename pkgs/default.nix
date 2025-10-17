@@ -29,13 +29,19 @@ rec {
     version = stableVersion sources;
   };
 
+  piliplus = pkgs.callPackage ./piliplus rec {
+    sources = fetchedSrc.piliplus;
+    inherit (sources) version;
+    pubspecLock = builtins.fromJSON (builtins.readFile ./piliplus/pubspec.lock.json);
+    gitHashes = import ./piliplus/git-hashes.nix;
+  };
+
   pixes = pkgs.callPackage ./pixes rec {
     sources = fetchedSrc.pixes;
     version = stableVersion sources;
     pubspecLock = builtins.fromJSON (builtins.readFile ./pixes/pubspec.lock.json);
     gitHashes = import ./pixes/git-hashes.nix;
   };
-
   pixes-git = pkgs.callPackage ./pixes rec {
     sources = fetchedSrc.pixes-git;
     version = unstableVersion sources;
