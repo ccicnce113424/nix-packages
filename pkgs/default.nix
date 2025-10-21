@@ -14,10 +14,14 @@ rec {
     sources = fetchedSrc.danmakufactory;
     version = stableVersion sources;
   };
-  danmakufactory-git = pkgs.callPackage ./danmakufactory-git rec {
-    sources = fetchedSrc.danmakufactory-git;
-    version = unstableVersion sources;
-  };
+  danmakufactory-git =
+    (pkgs.callPackage ./danmakufactory-git rec {
+      sources = fetchedSrc.danmakufactory-git;
+      version = unstableVersion sources;
+    }).overrideAttrs
+      {
+        meta.broken = true;
+      };
 
   lxgw-wenkai-gb = pkgs.callPackage ./lxgw-wenkai-gb rec {
     sources = fetchedSrc.lxgw-wenkai-gb;
