@@ -5,11 +5,14 @@
   gitHashes,
   lib,
   flutter332,
+  flutter335,
   makeDesktopItem,
   copyDesktopItems,
 }:
-
-flutter332.buildFlutterApplication {
+let
+  flutter = if version == "1.2.0" then flutter332 else flutter335;
+in
+flutter.buildFlutterApplication {
   inherit (sources) pname src;
   inherit version pubspecLock gitHashes;
 
