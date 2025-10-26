@@ -43,6 +43,14 @@
     };
     date = "2025-10-01";
   };
+  dxvk-gplall = {
+    pname = "dxvk-gplall";
+    version = "2.7.1-1";
+    src = fetchurl {
+      url = "https://github.com/Digger1955/dxvk-gplasync-lowlatency/releases/download/DXVK-GPLALL-2.7.1-1/DXVK-GPLALL-MSVC-Windows-AVX2-O2-LTCG-AMD64.2.7.1-1.zip";
+      sha256 = "sha256-XezfqwwKygUQcu/J6NtTFJHcKacy4xYSXzCWmLZg6Cw=";
+    };
+  };
   lxgw-wenkai-gb = {
     pname = "lxgw-wenkai-gb";
     version = "v1.521";

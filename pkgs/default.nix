@@ -23,6 +23,18 @@ rec {
         meta.broken = true;
       };
 
+  dxvk-gplall-bin-w32 = pkgs.callPackage ./dxvk-gplall-bin rec {
+    sources = fetchedSrc.dxvk-gplall;
+    inherit (sources) version;
+    sourceRoot = "x32";
+  };
+
+  dxvk-gplall-bin-w64 = pkgs.callPackage ./dxvk-gplall-bin rec {
+    sources = fetchedSrc.dxvk-gplall;
+    inherit (sources) version;
+    sourceRoot = "x64";
+  };
+
   lxgw-wenkai-gb = pkgs.callPackage ./lxgw-wenkai-gb rec {
     sources = fetchedSrc.lxgw-wenkai-gb;
     version = stableVersion sources;
