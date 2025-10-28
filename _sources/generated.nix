@@ -78,15 +78,15 @@
   };
   piliplus = {
     pname = "piliplus";
-    version = "1.1.4.15";
+    version = "1.1.4.16";
     src = fetchFromGitHub {
       owner = "bggRGjQaUbCoE";
       repo = "PiliPlus";
-      rev = "1.1.4.15";
+      rev = "1.1.4.16";
       fetchSubmodules = false;
-      sha256 = "sha256-MJs8ZbnMKL+A2s6sB3mMLeEFWkJYbzOqKtiXbtbuPJE=";
+      sha256 = "sha256-zQVDjcCaaqJ15Z7AJ7Hth1eJGzlgkHfOXW8vUAeqd+U=";
     };
-    "pubspec.lock" = builtins.readFile ./piliplus-1.1.4.15/pubspec.lock;
+    "pubspec.lock" = builtins.readFile ./piliplus-1.1.4.16/pubspec.lock;
   };
   pixes = {
     pname = "pixes";
@@ -116,15 +116,15 @@
   };
   splayer-git = {
     pname = "splayer-git";
-    version = "7943b56dbbe60339bfc16ac36856a6895d7d6fe6";
+    version = "9967bcb102e9d400d278ed2f5d262dce3641cb32";
     src = fetchFromGitHub {
       owner = "imsyy";
       repo = "SPlayer";
-      rev = "7943b56dbbe60339bfc16ac36856a6895d7d6fe6";
+      rev = "9967bcb102e9d400d278ed2f5d262dce3641cb32";
       fetchSubmodules = false;
-      sha256 = "sha256-7sq6s6KxUqZ+fM4DRh2nBGapULrmCcGj+grUIAqkc7A=";
+      sha256 = "sha256-rp3qTsHzgbTg5pt9/o9KIxgGGwmFM5Cg+VV/jbDjZRU=";
     };
-    date = "2025-10-27";
+    date = "2025-10-28";
   };
   uosc-danmaku = {
     pname = "uosc-danmaku";
