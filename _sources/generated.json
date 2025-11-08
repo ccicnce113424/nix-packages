@@ -29,6 +29,27 @@
     },
     "version": "4.9.0"
   },
+  "ayugram-desktop": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "ayugram-desktop",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": true,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "AyuGram",
+      "repo": "AyuGramDesktop",
+      "rev": "v6.2.4",
+      "sha256": "sha256-bFGk8lqPlNlaxbrulYe0+8ayj33frctruce3/TZ+W2c=",
+      "sparseCheckout": [],
+      "type": "github"
+    },
+    "version": "v6.2.4"
+  },
   "danmakufactory": {
     "cargoLocks": null,
     "date": null,
@@ -194,7 +215,7 @@
   },
   "splayer-git": {
     "cargoLocks": null,
-    "date": "2025-11-07",
+    "date": "2025-11-09",
     "extract": null,
     "name": "splayer-git",
     "passthru": null,
@@ -206,12 +227,12 @@
       "name": null,
       "owner": "imsyy",
       "repo": "SPlayer",
-      "rev": "8ec91e13923413ff3b9dd41a55b2cd08d4311814",
-      "sha256": "sha256-kKGSAchACmF0/HYVKjcfzO3i77fmslNzbOvYS6VgaNw=",
+      "rev": "eb0094c1899c7a2a488368e29538e8e473e52c37",
+      "sha256": "sha256-Esn4ntVj9yyTk/ooD0HFRR+DGxquOvsSkKKGwEzn+mE=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "8ec91e13923413ff3b9dd41a55b2cd08d4311814"
+    "version": "eb0094c1899c7a2a488368e29538e8e473e52c37"
   },
   "uosc-danmaku": {
     "cargoLocks": null,

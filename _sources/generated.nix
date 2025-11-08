@@ -20,6 +20,17 @@
       sha256 = "sha256-fY8lobsRg2nDENYDY3R81zJ2x0Fr29vJccrelbdggmg=";
     };
   };
+  ayugram-desktop = {
+    pname = "ayugram-desktop";
+    version = "v6.2.4";
+    src = fetchFromGitHub {
+      owner = "AyuGram";
+      repo = "AyuGramDesktop";
+      rev = "v6.2.4";
+      fetchSubmodules = true;
+      sha256 = "sha256-bFGk8lqPlNlaxbrulYe0+8ayj33frctruce3/TZ+W2c=";
+    };
+  };
   danmakufactory = {
     pname = "danmakufactory";
     version = "v1.70";
@@ -116,15 +127,15 @@
   };
   splayer-git = {
     pname = "splayer-git";
-    version = "8ec91e13923413ff3b9dd41a55b2cd08d4311814";
+    version = "eb0094c1899c7a2a488368e29538e8e473e52c37";
     src = fetchFromGitHub {
       owner = "imsyy";
       repo = "SPlayer";
-      rev = "8ec91e13923413ff3b9dd41a55b2cd08d4311814";
+      rev = "eb0094c1899c7a2a488368e29538e8e473e52c37";
       fetchSubmodules = false;
-      sha256 = "sha256-kKGSAchACmF0/HYVKjcfzO3i77fmslNzbOvYS6VgaNw=";
+      sha256 = "sha256-Esn4ntVj9yyTk/ooD0HFRR+DGxquOvsSkKKGwEzn+mE=";
     };
-    date = "2025-11-07";
+    date = "2025-11-09";
   };
   uosc-danmaku = {
     pname = "uosc-danmaku";
