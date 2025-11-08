@@ -116,13 +116,13 @@
   };
   splayer-git = {
     pname = "splayer-git";
-    version = "ccd0c6bdeb2488c9e1c852c9957e1f272ce4e905";
+    version = "8ec91e13923413ff3b9dd41a55b2cd08d4311814";
     src = fetchFromGitHub {
       owner = "imsyy";
       repo = "SPlayer";
-      rev = "ccd0c6bdeb2488c9e1c852c9957e1f272ce4e905";
+      rev = "8ec91e13923413ff3b9dd41a55b2cd08d4311814";
       fetchSubmodules = false;
-      sha256 = "sha256-2iDQy0JfkrelZ2Ov80B69R+nn6QpN7z5lZr/itdaJ6U=";
+      sha256 = "sha256-kKGSAchACmF0/HYVKjcfzO3i77fmslNzbOvYS6VgaNw=";
     };
     date = "2025-11-07";
   };
