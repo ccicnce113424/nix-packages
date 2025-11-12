@@ -3,6 +3,7 @@
 lock_file=pkgs/piliplus/pubspec.lock.json
 git_hashes=pkgs/piliplus/git-hashes.nix
 lock_path=$(jq -r '.piliplus.extract."pubspec.lock"' pkgs/_sources/generated.json)
+rev=$(jq -r '.piliplus.src.rev' pkgs/_sources/generated.json)
 
 yq <pkgs/_sources/$lock_path >$lock_file
 
@@ -20,3 +21,7 @@ jq -r '
 done
 
 echo "}" >>"$git_hashes"
+
+curl -sS -D - -o /dev/null "https://api.github.com/repos/bggRGjQaUbCoE/PiliPlus/commits?sha=$rev&per_page=1" |
+  tr -d '\r' |
+  sed -n 's/^link: .*[\?&]page=\([0-9]\+\)>; rel="last".*/\1/p' >pkgs/piliplus/rev-count.txt

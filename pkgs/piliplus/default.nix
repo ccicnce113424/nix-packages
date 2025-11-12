@@ -39,7 +39,7 @@ flutter335.buildFlutterApplication {
   preBuild = ''
     cat <<EOL > lib/build_config.dart
     class BuildConfig {
-      static const int versionCode = $(git rev-list --count HEAD);
+      static const int versionCode = ${lib.trim (builtins.readFile ./rev-count.txt)};
       static const String versionName = '${version}';
       static const int buildTime = $(git log -1 --format=%ct);
       static const String commitHash = '$(git rev-parse HEAD)';
