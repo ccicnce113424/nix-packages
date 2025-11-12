@@ -156,12 +156,12 @@
     "src": {
       "deepClone": false,
       "fetchSubmodules": false,
-      "leaveDotGit": false,
+      "leaveDotGit": true,
       "name": null,
       "owner": "bggRGjQaUbCoE",
       "repo": "PiliPlus",
       "rev": "1.1.5-pre3",
-      "sha256": "sha256-PargCUet6WRDZhNX0+bMK6PJGtopfiaeuIGbGI9+h1c=",
+      "sha256": "sha256-Nk1hQjuWUTcfhfMWY3JcL0YCA26gfZHYUEnaT9g9og4=",
       "sparseCheckout": [],
       "type": "github"
     },

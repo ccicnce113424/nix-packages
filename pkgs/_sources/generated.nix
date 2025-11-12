@@ -95,7 +95,10 @@
       repo = "PiliPlus";
       rev = "1.1.5-pre3";
       fetchSubmodules = false;
-      sha256 = "sha256-PargCUet6WRDZhNX0+bMK6PJGtopfiaeuIGbGI9+h1c=";
+      deepClone = false;
+      leaveDotGit = true;
+      sparseCheckout = [ ];
+      sha256 = "sha256-Nk1hQjuWUTcfhfMWY3JcL0YCA26gfZHYUEnaT9g9og4=";
     };
     "pubspec.lock" = builtins.readFile ./piliplus-1.1.5-pre3/pubspec.lock;
   };

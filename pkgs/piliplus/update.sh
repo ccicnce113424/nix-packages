@@ -2,9 +2,9 @@
 #!nix-shell -i bash -p jq yq nix-prefetch-git
 lock_file=pkgs/piliplus/pubspec.lock.json
 git_hashes=pkgs/piliplus/git-hashes.nix
-lock_path=$(jq -r '.piliplus.extract."pubspec.lock"' _sources/generated.json)
+lock_path=$(jq -r '.piliplus.extract."pubspec.lock"' pkgs/_sources/generated.json)
 
-yq <_sources/$lock_path >$lock_file
+yq <pkgs/_sources/$lock_path >$lock_file
 
 echo "{" >"$git_hashes"
 

@@ -1,9 +1,10 @@
 {
   "auto_orientation" = "sha256-0QOEW8+0PpBIELmzilZ8+z7ozNRxKgI0BzuBS8c1Fng=";
-  "canvas_danmaku" = "sha256-QgGwOBiyp0X5x2cqnOtBXIVIlKPMg0/WvdoiESJllrw=";
+  "canvas_danmaku" = "sha256-ipO7GOHLQphgXbT69Opjb3nUDLt+cofgQSc8o9/2BnM=";
   "chat_bottom_container" = "sha256-um9KwZUDxWBhFsGHfv00TjPzxDHmp43TLRF0GwuV1xs=";
   "extended_nested_scroll_view" = "sha256-Vjv5zp5c0Xob1H8/U0+lUueLqOKo7qwusOCchdt3Z7M=";
-  "floating" = "sha256-TJ2i3hTOQ4euHWr+lfQU44L3vVehmWVdZuAzNyVaEfA=";
+  "file_picker" = "sha256-NpwY39YtFm5/6cQHUrklpXhzgvtFfcmR/nP5OH/gdtk=";
+  "floating" = "sha256-0Xd9dsXJCQ/r/8Nb16oM+M8Jdw+r4QzGmU++HpqF/v0=";
   "flutter_sortable_wrap" = "sha256-Qj9Lzh+pJy+vHznGt5M3xwoJtaVtt00fxm4JJXL4bFI=";
   "material_design_icons_flutter" = "sha256-KMwjnzJJj8nemCqUCSwYafPOwTYbtoHNenxstocJtz4=";
   "media_kit" = "sha256-M8z6KGoKrhYFpnXnP+5sHjHMGJe04djKTxnkvLVtBtU=";

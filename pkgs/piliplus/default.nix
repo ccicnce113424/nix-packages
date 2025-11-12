@@ -5,100 +5,61 @@
   gitHashes,
   lib,
   flutter335,
-  autoPatchelfHook,
   makeDesktopItem,
   copyDesktopItems,
-  mpv,
+  gitMinimal,
   alsa-lib,
-  libass,
-  ffmpeg,
+  mpv-unwrapped,
   libplacebo,
-  libunwind,
-  shaderc,
-  vulkan-loader,
-  lcms2,
-  libdovi,
-  libdvdnav,
-  libdvdread,
-  mujs,
-  libbluray,
-  lua,
-  rubberband,
-  libuchardet,
-  zimg,
-  openal,
-  pipewire,
-  libpulseaudio,
-  libcaca,
-  libdrm,
-  libdisplay-info,
-  libgbm,
-  xorg,
-  nv-codec-headers-12,
-  libva,
-  libvdpau,
-  libayatana-appindicator,
+  libappindicator,
 }:
 
-flutter335.buildFlutterApplication rec {
+let
+  description = "Third-party Bilibili client developed in Flutter";
+in
+flutter335.buildFlutterApplication {
   inherit (sources) pname src;
   inherit version pubspecLock gitHashes;
 
+  patches = [ ./disable-auto-update.patch ];
+
   nativeBuildInputs = [
-    autoPatchelfHook
     copyDesktopItems
+    gitMinimal
   ];
 
   buildInputs = [
-    mpv
     alsa-lib
-    libass
-    ffmpeg
+    mpv-unwrapped
     libplacebo
-    libunwind
-    shaderc
-    vulkan-loader
-    lcms2
-    libdovi
-    libdvdnav
-    libdvdread
-    mujs
-    libbluray
-    lua
-    rubberband
-    libuchardet
-    zimg
-    openal
-    pipewire
-    libpulseaudio
-    libcaca
-    libdrm
-    libdisplay-info
-    libgbm
-    xorg.libXScrnSaver
-    xorg.libXpresent
-    nv-codec-headers-12
-    libva
-    libvdpau
-    libayatana-appindicator
+    libappindicator
   ];
 
+  # See lib/scripts/build.sh.
   preBuild = ''
     cat <<EOL > lib/build_config.dart
     class BuildConfig {
-      static const int versionCode = 0;
-      static const int buildTime = 0xFFFFFFFF;
-      static const String commitHash = '0000000000000000000000000000000000000000';
-      static const String versionName = "${version}";
+      static const int versionCode = $(git rev-list --count HEAD);
+      static const String versionName = '${version}';
+      static const int buildTime = $(git log -1 --format=%ct);
+      static const String commitHash = '$(git rev-parse HEAD)';
     }
     EOL
   '';
-  postInstall = ''
-    install -Dm644 assets/images/logo/logo.png $out/share/pixmaps/piliplus.png
-  '';
 
-  extraWrapProgramArgs = ''
-    --prefix LD_LIBRARY_PATH : $out/app/piliplus/lib:${mpv}/lib
+  postInstall = ''
+    declare -A sizes=(
+      [mdpi]=128
+      [hdpi]=192
+      [xhdpi]=256
+      [xxhdpi]=384
+      [xxxhdpi]=512
+    )
+    for var in "''${!sizes[@]}"; do
+      width=''${sizes[$var]}
+      install -Dm644 "android/app/src/main/res/drawable-$var/splash.png" \
+        "$out/share/icons/hicolor/''${width}x$width/apps/piliplus.png"
+    done
   '';
 
   desktopItems = [
@@ -107,8 +68,11 @@ flutter335.buildFlutterApplication rec {
       exec = "piliplus";
       icon = "piliplus";
       desktopName = "PiliPlus";
-      comment = "Third party Bilibili client built with Flutter";
-      categories = [ "AudioVideo" ];
+      categories = [
+        "Video"
+        "AudioVideo"
+      ];
+      comment = description;
       extraConfig = {
         "Comment[zh_CN]" = "使用 Flutter 开发的 BiliBili 第三方客户端";
         "Comment[zh_TW]" = "使用 Flutter 開發的 BiliBili 第三方客戶端";
@@ -116,15 +80,15 @@ flutter335.buildFlutterApplication rec {
     })
   ];
 
+  passthru.updateScript = ./update.rb;
+
   meta = {
-    maintainers = with lib.maintainers; [
-      xddxdd
-      ccicnce113424
-    ];
-    description = "Third party Bilibili client built with Flutter";
+    inherit description;
     homepage = "https://github.com/bggRGjQaUbCoE/PiliPlus";
-    license = lib.licenses.gpl3Only;
-    platforms = lib.platforms.unix;
+    changelog = "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/${version}";
+    license = lib.licenses.gpl3Plus;
+    maintainers = with lib.maintainers; [ ulysseszhan ];
+    platforms = lib.platforms.linux;
     mainProgram = "piliplus";
   };
 }
