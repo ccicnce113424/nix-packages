@@ -8,4 +8,4 @@ hello:
     nix run
 
 up:
-    nix run nixpkgs#nvfetcher -- -o pkgs/_sources
+    nix run nixpkgs#nvfetcher

@@ -3,7 +3,7 @@
 }:
 let
   inherit (pkgs) lib;
-  fetchedSrc = pkgs.callPackage ./_sources/generated.nix { };
+  fetchedSrc = pkgs.callPackage ../_sources/generated.nix { };
   stableVersion = src: lib.removePrefix "v" src.version;
   unstableVersion = src: "0-unstable-${src.date}";
 in
