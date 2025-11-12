@@ -98,7 +98,7 @@
       deepClone = false;
       leaveDotGit = true;
       sparseCheckout = [ ];
-      sha256 = "sha256-Nk1hQjuWUTcfhfMWY3JcL0YCA26gfZHYUEnaT9g9og4=";
+      sha256 = "sha256-/3R7AXO+PFH/8ub69vqcMSDyBNubbrlp07e7r0ZCiH8=";
     };
     "pubspec.lock" = builtins.readFile ./piliplus-1.1.5-pre3/pubspec.lock;
   };
