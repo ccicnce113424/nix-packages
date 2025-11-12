@@ -148,7 +148,7 @@
     "cargoLocks": null,
     "date": null,
     "extract": {
-      "pubspec.lock": "./piliplus-1.1.4.17/pubspec.lock"
+      "pubspec.lock": "./piliplus-1.1.5-pre3/pubspec.lock"
     },
     "name": "piliplus",
     "passthru": null,
@@ -160,12 +160,12 @@
       "name": null,
       "owner": "bggRGjQaUbCoE",
       "repo": "PiliPlus",
-      "rev": "1.1.4.17",
-      "sha256": "sha256-H8PGiX5mmTH3xXkjSUAF+ITTvysVOgRoiQ73eWrmTgo=",
+      "rev": "1.1.5-pre3",
+      "sha256": "sha256-PargCUet6WRDZhNX0+bMK6PJGtopfiaeuIGbGI9+h1c=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "1.1.4.17"
+    "version": "1.1.5-pre3"
   },
   "pixes": {
     "cargoLocks": null,
@@ -215,7 +215,7 @@
   },
   "splayer-git": {
     "cargoLocks": null,
-    "date": "2025-11-09",
+    "date": "2025-11-12",
     "extract": null,
     "name": "splayer-git",
     "passthru": null,
@@ -227,12 +227,12 @@
       "name": null,
       "owner": "imsyy",
       "repo": "SPlayer",
-      "rev": "eb0094c1899c7a2a488368e29538e8e473e52c37",
-      "sha256": "sha256-Esn4ntVj9yyTk/ooD0HFRR+DGxquOvsSkKKGwEzn+mE=",
+      "rev": "91927b8d761ddaa8479d134e3ff250e2f1179e47",
+      "sha256": "sha256-glYq0rHEV2xWoKznpMIU6klUxk1lXYOq4TBRuyTQgOM=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "eb0094c1899c7a2a488368e29538e8e473e52c37"
+    "version": "91927b8d761ddaa8479d134e3ff250e2f1179e47"
   },
   "uosc-danmaku": {
     "cargoLocks": null,

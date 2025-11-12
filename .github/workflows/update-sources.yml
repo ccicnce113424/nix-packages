@@ -30,8 +30,8 @@ jobs:
       - name: Update sources
         run: |
           nix flake update
-          nix run nixpkgs#nvfetcher
-          nix fmt _sources
+          nix run nixpkgs#nvfetcher -o pkgs/_sources
+          nix fmt pkgs/_sources
           pkgs/pixes/update.sh
           pkgs/pixes/update-git.sh
           pkgs/splayer-git/update-git.sh
