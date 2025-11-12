@@ -39,6 +39,7 @@ src.github = "akiirui/mpv-handler"
 [piliplus]
 extract = ["pubspec.lock"]
 fetch.github = "bggRGjQaUbCoE/PiliPlus"
+git.leaveDotGit = true
 src.github = "bggRGjQaUbCoE/PiliPlus"
 
 [pixes]
