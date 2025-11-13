@@ -65,9 +65,9 @@
   lxgw-wenkai-gb = {
     pname = "lxgw-wenkai-gb";
     version = "v1.521";
-    src = fetchTarball {
+    src = fetchurl {
       url = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.521/lxgw-wenkai-gb-v1.521.tar.gz";
-      sha256 = "sha256-sryAhrDy/nayJTxSmiI41ULp1rVyjIBArJaIT1DOp54=";
+      sha256 = "sha256-CtL4FEBNIhj4lQWhonDY3jEfJKY/tqt9r4l3NGWUmTM=";
     };
   };
   mpv-handler = {

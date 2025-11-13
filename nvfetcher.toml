@@ -28,7 +28,7 @@ src.github = "Digger1955/dxvk-gplasync-lowlatency"
 src.prefix = "DXVK-GPLALL-"
 
 [lxgw-wenkai-gb]
-fetch.tarball = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/$ver/lxgw-wenkai-gb-$ver.tar.gz"
+fetch.url = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/$ver/lxgw-wenkai-gb-$ver.tar.gz"
 src.github = "lxgw/LxgwWenkaiGB"
 
 [mpv-handler]

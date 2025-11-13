@@ -115,8 +115,9 @@
     "passthru": null,
     "pinned": false,
     "src": {
-      "sha256": "sha256-sryAhrDy/nayJTxSmiI41ULp1rVyjIBArJaIT1DOp54=",
-      "type": "tarball",
+      "name": null,
+      "sha256": "sha256-CtL4FEBNIhj4lQWhonDY3jEfJKY/tqt9r4l3NGWUmTM=",
+      "type": "url",
       "url": "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.521/lxgw-wenkai-gb-v1.521.tar.gz"
     },
     "version": "v1.521"
