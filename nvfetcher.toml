@@ -37,7 +37,7 @@ cargo_locks = ["Cargo.lock"]
 fetch.github = "01mf02/jaq"
 src.github_tag = "01mf02/jaq"
 
-[love-iwara]
+[loveiwara]
 extract = ["pubspec.lock"]
 fetch.github = "FoxSensei001/LoveIwara"
 src.github = "FoxSensei001/LoveIwara"
