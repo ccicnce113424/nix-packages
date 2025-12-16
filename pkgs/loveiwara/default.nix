@@ -56,7 +56,7 @@ flutter.buildFlutterApplication {
           sed -i '/if(MEDIA_KIT_LIBS_AVAILABLE)/i \
             set(LIBMPV_UNZIP_DIR "${mpv-unwrapped}/lib")\n\
             set(LIBMPV_PATH "${mpv-unwrapped}/lib")\n\
-            set(LIBMPV_HEADER_UNZIP_DIR "${mpv-unwrapped.dev}/include/mpv")' media_kit_video/linux/CMakeLists.txt
+            set(LIBMPV_HEADER_UNZIP_DIR "${mpv-unwrapped.dev}/include")' media_kit_video/linux/CMakeLists.txt
         '';
 
         installPhase = ''
