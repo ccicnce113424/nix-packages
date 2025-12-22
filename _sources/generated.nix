@@ -9,7 +9,7 @@
     version = "5.0.0";
     src = fetchurl {
       url = "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v5.0.0/AlgerMusicPlayer-5.0.0-linux-arm64.AppImage";
-      sha256 = "sha256-BGB9X/T3pCOqBRvNepXB2qASgWdPGz8q9/UpZFOt1j4=";
+      sha256 = "sha256-nbDg74IdemTIJFyWXM16kuFl3TzMCOAuKy27X4iEmRc=";
     };
   };
   algermusicplayer-x86 = {
@@ -17,7 +17,7 @@
     version = "5.0.0";
     src = fetchurl {
       url = "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v5.0.0/AlgerMusicPlayer-5.0.0-linux-x86_64.AppImage";
-      sha256 = "sha256-Ov4Igz1BanDUfBt2rgvYbexiCRoKcMecchQxM/eHojE=";
+      sha256 = "sha256-weIHNJN9CmeMIiAjwd3e6RG5dpb5lhJ9HwtETaLoNkk=";
     };
   };
   danmakufactory = {
@@ -45,10 +45,10 @@
   };
   dxvk-gplall = {
     pname = "dxvk-gplall";
-    version = "2.7.1-1";
+    version = "2.6.5-1";
     src = fetchurl {
-      url = "https://github.com/Digger1955/dxvk-gplasync-lowlatency/releases/download/DXVK-GPLALL-2.7.1-1/DXVK-GPLALL-MSVC-Windows-AVX2-O2-LTCG-AMD64.2.7.1-1.zip";
-      sha256 = "sha256-XezfqwwKygUQcu/J6NtTFJHcKacy4xYSXzCWmLZg6Cw=";
+      url = "https://github.com/Digger1955/dxvk-gplasync-lowlatency/releases/download/DXVK-GPLALL-2.6.5-1/DXVK-GPLALL-MSVC-Windows-AVX2-O2-LTCG-AMD64.2.6.5-1.zip";
+      sha256 = "sha256-2kibhJny7bmQmVoZoDnxrFuXuTUBU6sid3Xur15T0PM=";
     };
   };
   imfile-arm = {
@@ -164,15 +164,15 @@
   };
   splayer-git = {
     pname = "splayer-git";
-    version = "ccfc7adaf385fc1ac0aa52bcd7a72d20b5c345ca";
+    version = "68134ced3b38c38de2a83bce60a5e71c599be1d0";
     src = fetchFromGitHub {
       owner = "imsyy";
       repo = "SPlayer";
-      rev = "ccfc7adaf385fc1ac0aa52bcd7a72d20b5c345ca";
+      rev = "68134ced3b38c38de2a83bce60a5e71c599be1d0";
       fetchSubmodules = false;
-      sha256 = "sha256-LawBd31CCgKESs74jjMqoF3DLhI+rFLDZY4wDhm8dtA=";
+      sha256 = "sha256-0E25S/LXZwo5+3mJZZm1dzLOX72/qgdQzeLayTQ83aw=";
     };
-    date = "2025-12-21";
+    date = "2025-12-22";
   };
   uosc-danmaku = {
     pname = "uosc-danmaku";
