@@ -45,10 +45,10 @@
   };
   dxvk-gplall = {
     pname = "dxvk-gplall";
-    version = "2.6.5-1";
+    version = "2.7.1-1";
     src = fetchurl {
-      url = "https://github.com/Digger1955/dxvk-gplasync-lowlatency/releases/download/DXVK-GPLALL-2.6.5-1/DXVK-GPLALL-MSVC-Windows-AVX2-O2-LTCG-AMD64.2.6.5-1.zip";
-      sha256 = "sha256-2kibhJny7bmQmVoZoDnxrFuXuTUBU6sid3Xur15T0PM=";
+      url = "https://github.com/Digger1955/dxvk-gplasync-lowlatency/releases/download/DXVK-GPLALL-2.7.1-1/DXVK-GPLALL-MSVC-Windows-AVX2-O2-LTCG-AMD64.2.7.1-1.zip";
+      sha256 = "sha256-XezfqwwKygUQcu/J6NtTFJHcKacy4xYSXzCWmLZg6Cw=";
     };
   };
   imfile-arm = {
@@ -164,15 +164,15 @@
   };
   splayer-git = {
     pname = "splayer-git";
-    version = "68134ced3b38c38de2a83bce60a5e71c599be1d0";
+    version = "708346328770febde923cde086d30398ed59630c";
     src = fetchFromGitHub {
       owner = "imsyy";
       repo = "SPlayer";
-      rev = "68134ced3b38c38de2a83bce60a5e71c599be1d0";
+      rev = "708346328770febde923cde086d30398ed59630c";
       fetchSubmodules = false;
-      sha256 = "sha256-0E25S/LXZwo5+3mJZZm1dzLOX72/qgdQzeLayTQ83aw=";
+      sha256 = "sha256-OQbp3ycUICxtl7pop+3/b7WrrpY/IuvincwCAD+bm8E=";
     };
-    date = "2025-12-22";
+    date = "2025-12-21";
   };
   uosc-danmaku = {
     pname = "uosc-danmaku";
