@@ -23,11 +23,10 @@ rec {
         ./pkgs/flake-module.nix
       ];
       perSystem =
-        { pkgs, ... }:
+        { pkgs, config, ... }:
         {
-          devShells.default = pkgs.callPackage ./devshell.nix { };
+          devShells.default = pkgs.callPackage ./devshell.nix { inherit (config.packages) nvfetcher-bin; };
           legacyPackages = {
-            inherit (pkgs) nvfetcher;
             inherit (inputs) nixpkgs;
           };
         };

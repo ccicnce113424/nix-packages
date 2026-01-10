@@ -78,7 +78,7 @@
       sha256 = "sha256-vDrkk3fVF7SMzJzA7AI3kFQyYMbZPWS0gTEaK97cwX4=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./jaq-v3.0.0-beta/Cargo.lock;
+      lockFile = ./. + "/sha256-vDrkk3fVF7SMzJzA7AI3kFQyYMbZPWS0gTEaK97cwX4=/Cargo.lock";
       outputHashes = {
 
       };
@@ -94,7 +94,9 @@
       fetchSubmodules = false;
       sha256 = "sha256-PVbNK8k+JL0r94uQBtIxYu6J3d+4+7FkvDEvS6koyzI=";
     };
-    "pubspec.lock" = builtins.readFile ./loveiwara-0.4.1/pubspec.lock;
+    extract = {
+      "pubspec.lock" = ./. + "/sha256-PVbNK8k+JL0r94uQBtIxYu6J3d+4+7FkvDEvS6koyzI=/pubspec.lock";
+    };
   };
   lxgw-wenkai-gb = {
     pname = "lxgw-wenkai-gb";
@@ -114,15 +116,28 @@
       fetchSubmodules = false;
       sha256 = "sha256-Tku6wfMWM1UBRDZcayAYLhlR+w2+Ix1AVMhubslPGZU=";
     };
-    "plasmoid/metadata.json" =
-      builtins.readFile ./lyrica-67fbccecf8d048cf6ed7a73e93f640469b132b42/plasmoid/metadata.json;
+    extract = {
+      "plasmoid/metadata.json" =
+        ./. + "/sha256-Tku6wfMWM1UBRDZcayAYLhlR+w2+Ix1AVMhubslPGZU=/plasmoid/metadata.json";
+    };
     cargoLock."Cargo.lock" = {
-      lockFile = ./lyrica-67fbccecf8d048cf6ed7a73e93f640469b132b42/Cargo.lock;
+      lockFile = ./. + "/sha256-Tku6wfMWM1UBRDZcayAYLhlR+w2+Ix1AVMhubslPGZU=/Cargo.lock";
       outputHashes = {
         "netease-cloud-music-api-1.5.1" = "sha256-2Us08Hvz3IVj/O2iaZl5QlXuErX6d1JYTcDkzQNfTD4=";
       };
     };
     date = "2025-11-27";
+  };
+  nvfetcher = {
+    pname = "nvfetcher";
+    version = "0.8.0";
+    src = fetchFromGitHub {
+      owner = "berberman";
+      repo = "nvfetcher";
+      rev = "0.8.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-78sPqekEDJiol2YD3Hx2zHu5E4AtrbNrUKi0032HMHo=";
+    };
   };
   piliplus = {
     pname = "piliplus";
@@ -134,7 +149,9 @@
       fetchSubmodules = false;
       sha256 = "sha256-SSGLkBB0PH42GvXeVKdbURmo94TsGcR4ZtMFSD3OmEc=";
     };
-    "pubspec.lock" = builtins.readFile ./piliplus-1.1.5.3/pubspec.lock;
+    extract = {
+      "pubspec.lock" = ./. + "/sha256-SSGLkBB0PH42GvXeVKdbURmo94TsGcR4ZtMFSD3OmEc=/pubspec.lock";
+    };
   };
   pixes = {
     pname = "pixes";
@@ -146,7 +163,9 @@
       fetchSubmodules = false;
       sha256 = "sha256-J6ap9kuiRyjZQHW5z4LyM9ww2FCDmgv5+qML5/YldNA=";
     };
-    "pubspec.lock" = builtins.readFile ./pixes-v1.2.0/pubspec.lock;
+    extract = {
+      "pubspec.lock" = ./. + "/sha256-J6ap9kuiRyjZQHW5z4LyM9ww2FCDmgv5+qML5_YldNA=/pubspec.lock";
+    };
   };
   pixes-git = {
     pname = "pixes-git";
@@ -158,8 +177,9 @@
       fetchSubmodules = false;
       sha256 = "sha256-FG1dGLGDS4UovGrbZALQ8VSYi2KlNYPwWJ37ozDf8WM=";
     };
-    "pubspec.lock" =
-      builtins.readFile ./pixes-git-583ccdea5202c7f35f852dd913f07b7e497827b0/pubspec.lock;
+    extract = {
+      "pubspec.lock" = ./. + "/sha256-FG1dGLGDS4UovGrbZALQ8VSYi2KlNYPwWJ37ozDf8WM=/pubspec.lock";
+    };
     date = "2025-10-19";
   };
   splayer-git = {
@@ -173,7 +193,7 @@
       sha256 = "sha256-+/7CgRcosAmOrMQdAZlivhDUPL9sTJWwONZamn0J6cs=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./splayer-git-5854f444646b740de99518f78d6080ae0866916c/Cargo.lock;
+      lockFile = ./. + "/sha256-+_7CgRcosAmOrMQdAZlivhDUPL9sTJWwONZamn0J6cs=/Cargo.lock";
       outputHashes = {
 
       };

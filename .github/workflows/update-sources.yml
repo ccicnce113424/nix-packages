@@ -32,7 +32,7 @@ jobs:
         run: |
           nix flake update
           export NIX_PATH="nixpkgs=$(nix eval --raw .#nixpkgs)"
-          nix run .#nvfetcher
+          nix run .#nvfetcher-bin
           nix fmt _sources
           git add .
           pkgs/daed/update.sh

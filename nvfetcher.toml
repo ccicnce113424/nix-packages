@@ -34,7 +34,7 @@ src.github = "imfile-io/imfile-desktop"
 src.prefix = "v"
 
 [jaq]
-cargo_locks = ["Cargo.lock"]
+cargo_lock = ["Cargo.lock"]
 fetch.github = "01mf02/jaq"
 src.github_tag = "01mf02/jaq"
 
@@ -48,10 +48,15 @@ fetch.url = "https://github.com/lxgw/LxgwWenkaiGB/releases/download/$ver/lxgw-we
 src.github = "lxgw/LxgwWenkaiGB"
 
 [lyrica]
-cargo_locks = ["Cargo.lock"]
+cargo_lock = ["Cargo.lock"]
 extract = ["plasmoid/metadata.json"]
 fetch.github = "ccicnce113424/lyrica"
 src.git = "https://github.com/ccicnce113424/lyrica"
+
+[nvfetcher]
+pinned = true
+fetch.github = "berberman/nvfetcher"
+src.github = "berberman/nvfetcher"
 
 [piliplus]
 extract = ["pubspec.lock"]
@@ -69,7 +74,7 @@ fetch.github = "wgh136/pixes"
 src.git = "https://github.com/wgh136/pixes"
 
 [splayer-git]
-cargo_locks = ["Cargo.lock"]
+cargo_lock = ["Cargo.lock"]
 fetch.github = "imsyy/SPlayer"
 src.git = "https://github.com/imsyy/SPlayer"
 
