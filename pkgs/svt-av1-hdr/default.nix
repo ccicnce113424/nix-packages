@@ -10,7 +10,7 @@
   hdr10plus,
 }:
 
-stdenv.mkDerivation (finalAttrs: {
+stdenv.mkDerivation (_finalAttrs: {
   inherit (sources) pname src;
   inherit version;
 
