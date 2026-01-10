@@ -63,6 +63,13 @@ rec {
     inherit lyrica;
   };
 
+  nvfetcher-bin =
+    let
+      repo = import fetchedSrc.nvfetcher.src;
+      pkgsAppended = pkgs.appendOverlays [ repo.outputs.overlays.default ];
+    in
+    pkgsAppended.nvfetcher-bin;
+
   piliplus = pkgs.callPackage ./piliplus rec {
     sources = fetchedSrc.piliplus;
     inherit (sources) version;
