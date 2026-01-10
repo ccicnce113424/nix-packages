@@ -19,7 +19,6 @@
           priority = 2;
         };
         settings.formatter.nixf-diagnose.options = [
-          "--auto-fix"
           "--ignore"
           "sema-primop-overridden"
         ];
