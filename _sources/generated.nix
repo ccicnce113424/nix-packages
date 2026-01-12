@@ -33,15 +33,15 @@
   };
   danmakufactory-git = {
     pname = "danmakufactory-git";
-    version = "aa04ca55c9d50ce3fb603099abee38bf565328b0";
+    version = "cfb63683dfe796fb604e652ed405366f41f8d25e";
     src = fetchFromGitHub {
       owner = "hihkm";
       repo = "DanmakuFactory";
-      rev = "aa04ca55c9d50ce3fb603099abee38bf565328b0";
+      rev = "cfb63683dfe796fb604e652ed405366f41f8d25e";
       fetchSubmodules = true;
-      sha256 = "sha256-9bU3WAkRvgQ3YI1OV3r9WNsOzP+YuNg2mt87Eg2xEmk=";
+      sha256 = "sha256-MbWyu/dmFHONawDAHN7MwJgtUBSks82pv2zm15nj+x8=";
     };
-    date = "2025-12-19";
+    date = "2026-01-12";
   };
   dxvk-gplall = {
     pname = "dxvk-gplall";
@@ -184,21 +184,21 @@
   };
   splayer-git = {
     pname = "splayer-git";
-    version = "f862bbe2efabd4bdd3e0f83b1e3214707244ff33";
+    version = "c581cb3d2b6fa328a5590a3546c0d13eab50718a";
     src = fetchFromGitHub {
       owner = "imsyy";
       repo = "SPlayer";
-      rev = "f862bbe2efabd4bdd3e0f83b1e3214707244ff33";
+      rev = "c581cb3d2b6fa328a5590a3546c0d13eab50718a";
       fetchSubmodules = false;
-      sha256 = "sha256-jp+mla15Sv4W/T4QcQOIBeCErMNJj0W8U4Vr01fMhBM=";
+      sha256 = "sha256-hltCKF2b2UJaKNt9FQtZlHDnYjgzB4NQGdkLizmuWKM=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-jp+mla15Sv4W_T4QcQOIBeCErMNJj0W8U4Vr01fMhBM=/Cargo.lock";
+      lockFile = ./. + "/sha256-hltCKF2b2UJaKNt9FQtZlHDnYjgzB4NQGdkLizmuWKM=/Cargo.lock";
       outputHashes = {
 
       };
     };
-    date = "2026-01-10";
+    date = "2026-01-12";
   };
   svt-av1-hdr = {
     pname = "svt-av1-hdr";
@@ -224,15 +224,15 @@
   };
   uosc-danmaku-git = {
     pname = "uosc-danmaku-git";
-    version = "3bbad2da58d7a7e11ff80fe3d644583a626dbd49";
+    version = "80bb22655bd76f837c92cc428dfc2d5e3918af8f";
     src = fetchFromGitHub {
       owner = "Tony15246";
       repo = "uosc_danmaku";
-      rev = "3bbad2da58d7a7e11ff80fe3d644583a626dbd49";
+      rev = "80bb22655bd76f837c92cc428dfc2d5e3918af8f";
       fetchSubmodules = false;
-      sha256 = "sha256-cuBKZbalzYnOP4OKUlLSEU7G+ii0FllV1zA476RAI/I=";
+      sha256 = "sha256-pznCeYnKK5+qTEFCDVUewH1zXWxc7PsJSkpA/edlkoE=";
     };
-    date = "2026-01-02";
+    date = "2026-01-11";
   };
   zhuque = {
     pname = "zhuque";
