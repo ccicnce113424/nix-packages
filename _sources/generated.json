@@ -52,7 +52,7 @@
   },
   "danmakufactory-git": {
     "cargoLock": null,
-    "date": "2025-12-19",
+    "date": "2026-01-12",
     "extract": null,
     "name": "danmakufactory-git",
     "passthru": null,
@@ -64,12 +64,12 @@
       "name": null,
       "owner": "hihkm",
       "repo": "DanmakuFactory",
-      "rev": "aa04ca55c9d50ce3fb603099abee38bf565328b0",
-      "sha256": "sha256-9bU3WAkRvgQ3YI1OV3r9WNsOzP+YuNg2mt87Eg2xEmk=",
+      "rev": "cfb63683dfe796fb604e652ed405366f41f8d25e",
+      "sha256": "sha256-MbWyu/dmFHONawDAHN7MwJgtUBSks82pv2zm15nj+x8=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "aa04ca55c9d50ce3fb603099abee38bf565328b0"
+    "version": "cfb63683dfe796fb604e652ed405366f41f8d25e"
   },
   "dxvk-gplall": {
     "cargoLock": null,
@@ -303,11 +303,11 @@
   "splayer-git": {
     "cargoLock": {
       "Cargo.lock": [
-        "sha256-jp+mla15Sv4W_T4QcQOIBeCErMNJj0W8U4Vr01fMhBM=/Cargo.lock",
+        "sha256-hltCKF2b2UJaKNt9FQtZlHDnYjgzB4NQGdkLizmuWKM=/Cargo.lock",
         {}
       ]
     },
-    "date": "2026-01-10",
+    "date": "2026-01-12",
     "extract": null,
     "name": "splayer-git",
     "passthru": null,
@@ -319,12 +319,12 @@
       "name": null,
       "owner": "imsyy",
       "repo": "SPlayer",
-      "rev": "f862bbe2efabd4bdd3e0f83b1e3214707244ff33",
-      "sha256": "sha256-jp+mla15Sv4W/T4QcQOIBeCErMNJj0W8U4Vr01fMhBM=",
+      "rev": "c581cb3d2b6fa328a5590a3546c0d13eab50718a",
+      "sha256": "sha256-hltCKF2b2UJaKNt9FQtZlHDnYjgzB4NQGdkLizmuWKM=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "f862bbe2efabd4bdd3e0f83b1e3214707244ff33"
+    "version": "c581cb3d2b6fa328a5590a3546c0d13eab50718a"
   },
   "svt-av1-hdr": {
     "cargoLock": null,
@@ -370,7 +370,7 @@
   },
   "uosc-danmaku-git": {
     "cargoLock": null,
-    "date": "2026-01-02",
+    "date": "2026-01-11",
     "extract": null,
     "name": "uosc-danmaku-git",
     "passthru": null,
@@ -382,12 +382,12 @@
       "name": null,
       "owner": "Tony15246",
       "repo": "uosc_danmaku",
-      "rev": "3bbad2da58d7a7e11ff80fe3d644583a626dbd49",
-      "sha256": "sha256-cuBKZbalzYnOP4OKUlLSEU7G+ii0FllV1zA476RAI/I=",
+      "rev": "80bb22655bd76f837c92cc428dfc2d5e3918af8f",
+      "sha256": "sha256-pznCeYnKK5+qTEFCDVUewH1zXWxc7PsJSkpA/edlkoE=",
       "sparseCheckout": [],
       "type": "github"
     },
-    "version": "3bbad2da58d7a7e11ff80fe3d644583a626dbd49"
+    "version": "80bb22655bd76f837c92cc428dfc2d5e3918af8f"
   },
   "zhuque": {
     "cargoLock": null,
