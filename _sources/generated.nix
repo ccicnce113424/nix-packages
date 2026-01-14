@@ -211,6 +211,17 @@
       sha256 = "sha256-FekKVNMycfvFWTQ2LbYl5t2yCBYh7fdSDPdeYViGNbY=";
     };
   };
+  svt-av1-psyex = {
+    pname = "svt-av1-psyex";
+    version = "v3.0.2-B";
+    src = fetchFromGitHub {
+      owner = "BlueSwordM";
+      repo = "svt-av1-psyex";
+      rev = "v3.0.2-B";
+      fetchSubmodules = false;
+      sha256 = "sha256-klfrbow8UtpIPwIgt8tK7FP7Jp6In9nxfOZrdi1PsHo=";
+    };
+  };
   uosc-danmaku = {
     pname = "uosc-danmaku";
     version = "v2.0.0";

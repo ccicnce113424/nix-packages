@@ -82,6 +82,10 @@ src.git = "https://github.com/imsyy/SPlayer"
 fetch.github = "juliobbv-p/svt-av1-hdr"
 src.github_tag = "juliobbv-p/svt-av1-hdr"
 
+[svt-av1-psyex]
+fetch.github = "BlueSwordM/svt-av1-psyex"
+src.github = "BlueSwordM/svt-av1-psyex"
+
 [uosc-danmaku]
 fetch.github = "Tony15246/uosc_danmaku"
 src.github = "Tony15246/uosc_danmaku"
