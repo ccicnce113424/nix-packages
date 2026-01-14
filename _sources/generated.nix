@@ -128,17 +128,6 @@
     };
     date = "2025-11-27";
   };
-  nvfetcher = {
-    pname = "nvfetcher";
-    version = "0.8.0";
-    src = fetchFromGitHub {
-      owner = "berberman";
-      repo = "nvfetcher";
-      rev = "0.8.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-78sPqekEDJiol2YD3Hx2zHu5E4AtrbNrUKi0032HMHo=";
-    };
-  };
   piliplus = {
     pname = "piliplus";
     version = "1.1.5.3";

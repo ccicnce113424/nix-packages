@@ -53,11 +53,6 @@ extract = ["plasmoid/metadata.json"]
 fetch.github = "ccicnce113424/lyrica"
 src.git = "https://github.com/ccicnce113424/lyrica"
 
-[nvfetcher]
-pinned = true
-fetch.github = "berberman/nvfetcher"
-src.github = "berberman/nvfetcher"
-
 [piliplus]
 extract = ["pubspec.lock"]
 fetch.github = "bggRGjQaUbCoE/PiliPlus"

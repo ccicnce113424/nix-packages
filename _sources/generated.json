@@ -210,27 +210,6 @@
     },
     "version": "67fbccecf8d048cf6ed7a73e93f640469b132b42"
   },
-  "nvfetcher": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "nvfetcher",
-    "passthru": null,
-    "pinned": true,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "berberman",
-      "repo": "nvfetcher",
-      "rev": "0.8.0",
-      "sha256": "sha256-78sPqekEDJiol2YD3Hx2zHu5E4AtrbNrUKi0032HMHo=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "0.8.0"
-  },
   "piliplus": {
     "cargoLock": null,
     "date": null,
