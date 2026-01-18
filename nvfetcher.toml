@@ -74,8 +74,9 @@ src.github = "EnderIce2/rpc-bridge"
 
 [splayer-git]
 cargo_lock = ["Cargo.lock"]
-fetch.github = "imsyy/SPlayer"
-src.git = "https://github.com/imsyy/SPlayer"
+fetch.github = "apoint123/SPlayer"
+src.branch = "feat/s2t-lyric-conversion"
+src.git = "https://github.com/apoint123/SPlayer"
 
 [svt-av1-hdr]
 fetch.github = "juliobbv-p/svt-av1-hdr"
