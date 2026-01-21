@@ -23,6 +23,8 @@ splayer.overrideAttrs (
     };
     cargoDeps = rustPlatform.importCargoLock sources.cargoLock."Cargo.lock";
 
+    env.VITE_BUILD_TYPE = "dev";
+
     # remove when splayer in nixpkgs has been updated
     nativeBuildInputs = prev.nativeBuildInputs ++ [ python3 ];
     # After the pnpm configure, we need to build the binaries of all instances
@@ -33,7 +35,7 @@ splayer.overrideAttrs (
     preBuild = ''
       for f in $(find . -path '*/node_modules/better-sqlite3' -type d); do
         (cd "$f" && (
-        pnpm run build-release --offline --nodedir="${electron.headers}"
+        npm run build-release --offline --nodedir="${electron.headers}"
         find build -type f -exec \
           ${lib.getExe removeReferencesTo} \
           -t "${electron.headers}" {} \;
