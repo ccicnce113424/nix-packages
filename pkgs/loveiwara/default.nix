@@ -3,7 +3,7 @@
   version,
   srcInfo,
   lib,
-  flutter338,
+  flutter341,
   makeDesktopItem,
   copyDesktopItems,
   autoPatchelfHook,
@@ -12,7 +12,7 @@
   mpv-unwrapped,
 }:
 let
-  flutter = flutter338;
+  flutter = flutter341;
 in
 flutter.buildFlutterApplication {
   inherit (sources) pname src;
