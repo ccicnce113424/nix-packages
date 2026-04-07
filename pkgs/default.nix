@@ -106,6 +106,12 @@ rec {
     srcInfo = lib.importJSON ./pixes/git/src-info.json;
   };
 
+  pixiv-viewer = pkgs.callPackage ./pixiv-viewer rec {
+    inherit (lib.importJSON ./pixiv-viewer/src-info.json) hash;
+    sources = fetchedSrc.pixiv-viewer;
+    version = stableVersion sources;
+  };
+
   shijima-qt = pkgs.callPackage ./shijima-qt { };
 
   splayer-git = pkgs.callPackage ./splayer-git rec {

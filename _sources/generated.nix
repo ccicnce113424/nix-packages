@@ -189,6 +189,23 @@
     };
     date = "2026-04-07";
   };
+  pixiv-viewer = {
+    pname = "pixiv-viewer";
+    version = "v1.32.2";
+    src = fetchFromGitHub {
+      owner = "asadahimeka";
+      repo = "pixiv-viewer-app";
+      rev = "v1.32.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-DOY+rybBGuds+rSRqDrB4DIfcfmfP1lixsVfeHv+xFY=";
+    };
+    cargoLock."src-tauri/Cargo.lock" = {
+      lockFile = ./. + "/sha256-DOY+rybBGuds+rSRqDrB4DIfcfmfP1lixsVfeHv+xFY=/src-tauri/Cargo.lock";
+      outputHashes = {
+
+      };
+    };
+  };
   splayer-git = {
     pname = "splayer-git";
     version = "bea6f8f9b8283ec79ee5b3128e8122a16a7bf41c";

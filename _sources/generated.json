@@ -303,6 +303,32 @@
     },
     "version": "2794e76cb68175754080f5e14a8a28b7e6a91476"
   },
+  "pixiv-viewer": {
+    "cargoLock": {
+      "src-tauri/Cargo.lock": [
+        "sha256-DOY+rybBGuds+rSRqDrB4DIfcfmfP1lixsVfeHv+xFY=/src-tauri/Cargo.lock",
+        {}
+      ]
+    },
+    "date": null,
+    "extract": null,
+    "name": "pixiv-viewer",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "asadahimeka",
+      "repo": "pixiv-viewer-app",
+      "rev": "v1.32.2",
+      "sha256": "sha256-DOY+rybBGuds+rSRqDrB4DIfcfmfP1lixsVfeHv+xFY=",
+      "sparseCheckout": [],
+      "type": "github"
+    },
+    "version": "v1.32.2"
+  },
   "splayer-git": {
     "cargoLock": {
       "Cargo.lock": [

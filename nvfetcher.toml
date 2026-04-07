@@ -67,6 +67,11 @@ extract = ["pubspec.lock"]
 fetch.github = "wgh136/pixes"
 src.git = "https://github.com/wgh136/pixes"
 
+[pixiv-viewer]
+cargo_lock = ["src-tauri/Cargo.lock"]
+fetch.github = "asadahimeka/pixiv-viewer-app"
+src.github = "asadahimeka/pixiv-viewer-app"
+
 [splayer-git]
 cargo_lock = ["Cargo.lock"]
 fetch.github = "imsyy/SPlayer"
