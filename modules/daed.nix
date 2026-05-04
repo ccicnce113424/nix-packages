@@ -31,6 +31,7 @@
   config,
   pkgs,
   lib,
+  utils,
   ...
 }:
 
@@ -127,11 +128,72 @@ in
       serviceConfig = {
         ExecStart = [
           ""
-          "${lib.getExe cfg.package} run -c ${cfg.configDir} -l ${cfg.listen}"
+          (utils.escapeSystemdExecArgs [
+            (lib.getExe cfg.package)
+            "run"
+            "-c"
+            cfg.configDir
+            "-l"
+            cfg.listen
+          ])
         ];
         Environment = "DAE_LOCATION_ASSET=${cfg.assetsPath}";
+
+        # Hardening
+        NoNewPrivileges = true;
+        AmbientCapabilities = [ ];
+        CapabilityBoundingSet = [
+          "CAP_BPF"
+          "CAP_NET_BIND_SERVICE"
+          "CAP_NET_ADMIN"
+          "CAP_NET_RAW"
+          "CAP_SYS_ADMIN"
+        ];
+        PrivateTmp = true;
+        PrivateIPC = true;
+        PrivateDevices = true;
+        PrivateMounts = true;
+        KeyringMode = "private";
+        ProtectHome = true;
+        ProtectSystem = "strict";
+        ReadWritePaths = [ cfg.configDir ];
+        UMask = "0077";
+        ProtectControlGroups = true;
+        ProtectClock = true;
+        ProtectHostname = true;
+        ProtectKernelLogs = true;
+        ProtectKernelModules = true;
+        LockPersonality = true;
+        MemoryDenyWriteExecute = true;
+        RestrictAddressFamilies = [
+          "AF_INET"
+          "AF_INET6"
+          "AF_NETLINK"
+        ];
+        RestrictNamespaces = [ "net" ];
+        RestrictRealtime = true;
+        RestrictSUIDSGID = true;
+        RemoveIPC = true;
+        SystemCallArchitectures = "native";
+        SystemCallErrorNumber = "EPERM";
+        SystemCallLog = "all";
+        SystemCallFilter = [
+          "~@clock"
+          "~@cpu-emulation"
+          "~@debug"
+          "~@module"
+          "~@obsolete"
+          "~@raw-io"
+          "~@reboot"
+          "~@resources"
+          "~@swap"
+        ];
+        DevicePolicy = "closed";
       };
     };
+    systemd.tmpfiles.rules = [
+      "d ${cfg.configDir} 0750 root root - -"
+    ];
   };
   meta.maintainers = with lib.maintainers; [ ccicnce113424 ];
 }
