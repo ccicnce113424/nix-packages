@@ -116,6 +116,11 @@ lib.makeScope pkgs.newScope (self: {
     version = stableVersion sources;
   };
 
+  ntfsprogs-plus = self.callPackage ./ntfsprogs-plus rec {
+    sources = fetchedSrc.ntfsprogs-plus;
+    version = unstableVersion sources;
+  };
+
   piliplus = self.callPackage ./piliplus rec {
     sources = fetchedSrc.piliplus;
     inherit (sources) version;
