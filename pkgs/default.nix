@@ -12,6 +12,8 @@ lib.makeScope pkgs.newScope (self: {
 
   daed = self.callPackage ./daed/package.nix { };
 
+  dav2d = self.callPackage ./dav2d/package.nix { };
+
   dxvk-gplall-bin-w32 = self.callPackage ./dxvk-gplall-bin rec {
     sources = fetchedSrc.dxvk-gplall;
     inherit (sources) version;
