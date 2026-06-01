@@ -10,6 +10,8 @@ in
 lib.makeScope pkgs.newScope (self: {
   algermusicplayer = self.callPackage ./algermusicplayer { inherit fetchedSrc; };
 
+  avm = self.callPackage ./avm { };
+
   daed = self.callPackage ./daed/package.nix { };
 
   dav2d = self.callPackage ./dav2d/package.nix { };
