@@ -380,6 +380,27 @@
         },
         "version": "v3.9.7-beta.2"
     },
+    "nix-auth": {
+        "cargoLock": null,
+        "date": "2026-07-02",
+        "extract": null,
+        "name": "nix-auth",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "numtide",
+            "repo": "nix-auth",
+            "rev": "606cf8a61467a1c2ca208e7c9698c05b0a4631e9",
+            "sha256": "sha256-3uQHlsljEgAqermVRTNSgk+YKnIxnIEMammX4jYfoTc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "606cf8a61467a1c2ca208e7c9698c05b0a4631e9"
+    },
     "ntfsprogs-plus": {
         "cargoLock": null,
         "date": "2026-05-07",

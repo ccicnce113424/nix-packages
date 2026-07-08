@@ -120,6 +120,12 @@ lib.makeScope pkgs.newScope (
       version = stableVersion sources;
     };
 
+    nix-auth = self.callPackage ./nix-auth rec {
+      inherit (lib.importJSON ./nix-auth/src-info.json) hash;
+      sources = fetchedSrc.nix-auth;
+      version = unstableVersion sources 0;
+    };
+
     ntfsprogs-plus = self.callPackage ./ntfsprogs-plus {
       sources = fetchedSrc.ntfsprogs-plus;
     };
