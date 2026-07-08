@@ -59,6 +59,18 @@
     };
     date = "2026-07-04";
   };
+  flake-linter = {
+    pname = "flake-linter";
+    version = "453ac8cef41094a4e26cd78b32638969b55561c8";
+    src = fetchFromGitHub {
+      owner = "Mic92";
+      repo = "flake-linter";
+      rev = "453ac8cef41094a4e26cd78b32638969b55561c8";
+      fetchSubmodules = false;
+      sha256 = "sha256-RzOE3knD5IDJyNysscd40WOh5XUWdms8pbObABNTfwI=";
+    };
+    date = "2026-07-05";
+  };
   fxz = {
     pname = "fxz";
     version = "f12d7eb3ecebcfa5e2d3dc8a016772b3cd101f39";

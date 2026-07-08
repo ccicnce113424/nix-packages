@@ -23,6 +23,10 @@ cargo_lock = ["Cargo.lock"]
 fetch.github = "Mic92/fast-nix-gc"
 src.git = "https://github.com/Mic92/fast-nix-gc"
 
+[flake-linter]
+fetch.github = "Mic92/flake-linter"
+src.git = "https://github.com/Mic92/flake-linter"
+
 [fxz]
 fetch.github = "conor42/fxz"
 src.git = "https://github.com/conor42/fxz"

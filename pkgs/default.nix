@@ -42,6 +42,11 @@ lib.makeScope pkgs.newScope (
       version = unstableVersion sources 0;
     };
 
+    flake-linter = self.callPackage ./flake-linter rec {
+      sources = fetchedSrc.flake-linter;
+      version = unstableVersion sources 0;
+    };
+
     fxz =
       let
         sources = fetchedSrc.fxz;
