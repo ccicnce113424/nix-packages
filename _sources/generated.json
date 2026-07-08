@@ -65,6 +65,34 @@
         },
         "version": "v0.3.1"
     },
+    "fast-nix-gc": {
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-8bSrhuD0kGw0HlJqQsDDYidr9QG2aujOqS+46yNhW5Y=/Cargo.lock",
+                {
+                    "harmonia-file-core-3.1.0": "sha256-YklzRujFo5lvFsdLoedE6OL6OvSwNk/nfwlGxulyTS4="
+                }
+            ]
+        },
+        "date": "2026-07-04",
+        "extract": null,
+        "name": "fast-nix-gc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Mic92",
+            "repo": "fast-nix-gc",
+            "rev": "aba1902a691f538d7655a8cb1f6c88adc8ced241",
+            "sha256": "sha256-8bSrhuD0kGw0HlJqQsDDYidr9QG2aujOqS+46yNhW5Y=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "aba1902a691f538d7655a8cb1f6c88adc8ced241"
+    },
     "fxz": {
         "cargoLock": null,
         "date": "2022-01-09",

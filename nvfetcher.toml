@@ -18,6 +18,11 @@ src.prefix = "DXVK-GPLALL-"
 fetch.github = "lzpls/enimul"
 src.github_tag = "lzpls/enimul"
 
+[fast-nix-gc]
+cargo_lock = ["Cargo.lock"]
+fetch.github = "Mic92/fast-nix-gc"
+src.git = "https://github.com/Mic92/fast-nix-gc"
+
 [fxz]
 fetch.github = "conor42/fxz"
 src.git = "https://github.com/conor42/fxz"

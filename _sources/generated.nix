@@ -41,6 +41,24 @@
       sha256 = "sha256-7Jutd8WYe6WOEjFf4vHJnm3+4F9AevYprJfT2aqGIiI=";
     };
   };
+  fast-nix-gc = {
+    pname = "fast-nix-gc";
+    version = "aba1902a691f538d7655a8cb1f6c88adc8ced241";
+    src = fetchFromGitHub {
+      owner = "Mic92";
+      repo = "fast-nix-gc";
+      rev = "aba1902a691f538d7655a8cb1f6c88adc8ced241";
+      fetchSubmodules = false;
+      sha256 = "sha256-8bSrhuD0kGw0HlJqQsDDYidr9QG2aujOqS+46yNhW5Y=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-8bSrhuD0kGw0HlJqQsDDYidr9QG2aujOqS+46yNhW5Y=/Cargo.lock";
+      outputHashes = {
+        "harmonia-file-core-3.1.0" = "sha256-YklzRujFo5lvFsdLoedE6OL6OvSwNk/nfwlGxulyTS4=";
+      };
+    };
+    date = "2026-07-04";
+  };
   fxz = {
     pname = "fxz";
     version = "f12d7eb3ecebcfa5e2d3dc8a016772b3cd101f39";

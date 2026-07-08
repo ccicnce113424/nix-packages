@@ -37,6 +37,11 @@ lib.makeScope pkgs.newScope (
       version = stableVersion sources;
     };
 
+    fast-nix-gc = self.callPackage ./fast-nix-gc rec {
+      sources = fetchedSrc.fast-nix-gc;
+      version = unstableVersion sources 0;
+    };
+
     fxz =
       let
         sources = fetchedSrc.fxz;
