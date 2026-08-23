@@ -142,6 +142,12 @@ lib.makeScope pkgs.newScope (
       sources = fetchedSrc.open-orpheus-dev;
     };
 
+    pilinara = self.callPackage ./pilinara rec {
+      sources = fetchedSrc.pilinara;
+      inherit (sources) version;
+      srcInfo = lib.importJSON ./pilinara/src-info.json;
+    };
+
     piliplus = self.callPackage ./piliplus rec {
       sources = fetchedSrc.piliplus;
       inherit (sources) version;

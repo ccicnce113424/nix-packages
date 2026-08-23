@@ -480,6 +480,29 @@
         },
         "version": "da75ffd6394ba52b0d798a7ad20aa8db67d99ec6"
     },
+    "pilinara": {
+        "cargoLock": null,
+        "date": null,
+        "extract": {
+            "pubspec.lock": "sha256-xAfwv2pSVvoAOvgCrYJHUvDcHiLWA48nxEafIxGn6+4=/pubspec.lock"
+        },
+        "name": "pilinara",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Starfallan",
+            "repo": "PiliNara",
+            "rev": "2.1.0.2",
+            "sha256": "sha256-xAfwv2pSVvoAOvgCrYJHUvDcHiLWA48nxEafIxGn6+4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2.1.0.2"
+    },
     "piliplus": {
         "cargoLock": null,
         "date": null,
