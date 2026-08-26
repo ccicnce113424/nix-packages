@@ -1,12 +1,8 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - main
+  push: # any branch
   pull_request:
-    branches:
-      - main
   workflow_dispatch: # allows manual triggering
 
 jobs:
@@ -49,6 +45,7 @@ jobs:
             accept-flake-config = true
 
       - name: Set up Cachix
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: cachix/cachix-action@v17
         with:
           name: ccicnce113424 # replace with your Cachix cache name
