@@ -84,7 +84,8 @@ lib.makeScope pkgs.newScope (
     kikoflu = self.callPackage ./kikoflu rec {
       sources = fetchedSrc.kikoflu;
       version = stableVersion sources;
-      srcInfo = lib.importJSON ./kikoflu/src-info.json;
+      pubspecLock = lib.importJSON ./kikoflu/pubspec.lock.json;
+      gitHashes = lib.importJSON ./kikoflu/git-hashes.json;
     };
 
     krunner-fd-plugin = self.callPackage ./krunner-fd-plugin rec {
@@ -105,7 +106,8 @@ lib.makeScope pkgs.newScope (
     loveiwara = self.callPackage ./loveiwara rec {
       sources = fetchedSrc.loveiwara;
       version = stableVersion sources;
-      srcInfo = lib.importJSON ./loveiwara/src-info.json;
+      pubspecLock = lib.importJSON ./loveiwara/pubspec.lock.json;
+      gitHashes = lib.importJSON ./loveiwara/git-hashes.json;
     };
 
     lxgw-wenkai-gb = self.callPackage ./lxgw-wenkai-gb rec {
@@ -146,17 +148,23 @@ lib.makeScope pkgs.newScope (
       sources = fetchedSrc.piliplus;
       inherit (sources) version;
       srcInfo = lib.importJSON ./piliplus/src-info.json;
+      pubspecLock = lib.importJSON ./piliplus/pubspec.lock.json;
+      gitHashes = lib.importJSON ./piliplus/git-hashes.json;
     };
 
     pixes = self.callPackage ./pixes rec {
       sources = fetchedSrc.pixes;
+
       version = stableVersion sources;
-      srcInfo = lib.importJSON ./pixes/src-info.json;
+
+      pubspecLock = lib.importJSON ./pixes/pubspec.lock.json;
+      gitHashes = lib.importJSON ./pixes/git-hashes.json;
     };
     pixes-git = self.callPackage ./pixes rec {
       sources = fetchedSrc.pixes-git;
       version = unstableVersion sources self.pixes.version;
-      srcInfo = lib.importJSON ./pixes/git/src-info.json;
+      pubspecLock = lib.importJSON ./pixes/git/pubspec.lock.json;
+      gitHashes = lib.importJSON ./pixes/git/git-hashes.json;
     };
 
     pwasio = self.callPackage ./pwasio rec {
@@ -241,8 +249,11 @@ lib.makeScope pkgs.newScope (
 
     wild-reader = self.callPackage ./wild-reader rec {
       sources = fetchedSrc.wild;
+
       version = stableVersion sources;
-      srcInfo = lib.importJSON ./wild-reader/src-info.json;
+
+      pubspecLock = lib.importJSON ./wild-reader/pubspec.lock.json;
+      gitHashes = lib.importJSON ./wild-reader/git-hashes.json;
     };
 
     # wpsoffice-365 = pkgs.libsForQt5.callPackage ./wpsoffice-365 { };
