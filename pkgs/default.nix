@@ -69,11 +69,6 @@ lib.makeScope pkgs.newScope (
         }
       );
 
-    jaq = self.callPackage ./jaq rec {
-      sources = fetchedSrc.jaq;
-      version = stableVersion sources;
-    };
-
     jj-lsp = self.callPackage ./jj-lsp rec {
       sources = fetchedSrc.jj-lsp;
       inherit (sources) version;
