@@ -71,6 +71,7 @@ lib.makeScope pkgs.newScope (
     };
 
     kanzi-cpp = self.callPackage ./kanzi-cpp/package.nix { };
+    kanzi-go = self.callPackage ./kanzi-go/package.nix { };
 
     kikoflu = self.callPackage ./kikoflu rec {
       sources = fetchedSrc.kikoflu;
