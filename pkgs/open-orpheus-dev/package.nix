@@ -45,12 +45,12 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "open-orpheus";
-  version = "0.17.0";
+  version = "0.17.1";
   src = fetchFromGitHub {
     owner = "YUCLing";
     repo = "open-orpheus";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-qK7oR4EeH8Mio+etR79ZT62nj0LzKeXlWs1UYyl9SxU=";
+    hash = "sha256-l/r7mRQz7eTHlcrpK7qaPcpYF2fqsZ6gyNARr9fJ994=";
   };
 
   pnpmDeps = fetchPnpmDeps {
