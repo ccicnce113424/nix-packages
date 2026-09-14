@@ -12,6 +12,7 @@
   rustc,
   callPackage,
   zip,
+  cargo-zigbuild,
   makeWrapper,
   copyDesktopItems,
   makeDesktopItem,
@@ -83,6 +84,7 @@ stdenv.mkDerivation (finalAttrs: {
     rustc.llvmPackages.lld
     wasm-bindgen-cli
     zip
+    cargo-zigbuild
     makeWrapper
     copyDesktopItems
     removeReferencesTo
