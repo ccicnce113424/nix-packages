@@ -69,12 +69,14 @@ buildGoModule (finalAttrs: {
     '';
   };
 
-  vendorHash = "sha256-+YQ/Ia54N/QKwd9p4AePg3CMjQvc4mFE1EcA/JPc8Po=";
+  vendorHash = "sha256-SGM2avz/pUF/CMo/TLQHrDQ/wdqvBGp4XNlTe86b5Og=";
   proxyVendor = true;
 
   nativeBuildInputs = [ clang ];
 
   hardeningDisable = [ "zerocallusedregs" ];
+
+  patches = [ ./fix-dependency.patch ];
 
   prePatch = ''
     substituteInPlace Makefile \
