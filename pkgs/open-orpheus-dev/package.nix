@@ -13,6 +13,8 @@
   callPackage,
   zip,
   cargo-zigbuild,
+  pkg-config,
+  freetype,
   makeWrapper,
   copyDesktopItems,
   makeDesktopItem,
@@ -85,10 +87,13 @@ stdenv.mkDerivation (finalAttrs: {
     wasm-bindgen-cli
     zip
     cargo-zigbuild
+    pkg-config
     makeWrapper
     copyDesktopItems
     removeReferencesTo
   ];
+
+  buildInputs = [ freetype ];
 
   strictDeps = true;
   __structuredAttrs = true;
