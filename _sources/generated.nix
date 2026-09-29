@@ -421,25 +421,6 @@
       sha256 = "sha256-CBGTomn7nQ9NQ/7mg+m+S70x8Dy/7imUBhYUT2SVeNY=";
     };
   };
-  wild = {
-    pname = "wild";
-    version = "v0.0.15";
-    src = fetchFromGitHub {
-      owner = "niuhuan";
-      repo = "wild";
-      rev = "v0.0.15";
-      fetchSubmodules = false;
-      sha256 = "sha256-ZkGsZi70FIkDNFpv7ukulovLORR3ANVI1qJ10HU08Vo=";
-    };
-    extract = {
-      "pubspec.lock" = ./. + "/sha256-ZkGsZi70FIkDNFpv7ukulovLORR3ANVI1qJ10HU08Vo=/pubspec.lock";
-    };cargoLock."rust/Cargo.lock" = {
-      lockFile = ./. + "/sha256-ZkGsZi70FIkDNFpv7ukulovLORR3ANVI1qJ10HU08Vo=/rust/Cargo.lock";
-      outputHashes = {
-        
-      };
-    };
-  };
   zhuque = {
     pname = "zhuque";
     version = "v0.212";
