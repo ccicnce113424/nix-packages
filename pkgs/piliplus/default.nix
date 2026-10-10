@@ -15,6 +15,9 @@
   libplacebo,
   libappindicator,
   webkitgtk_4_1,
+  gtk3,
+  libx11,
+  libxi,
 }:
 let
   description = "Third-party Bilibili client developed in Flutter";
@@ -42,6 +45,9 @@ flutter.buildFlutterApplication {
     libplacebo
     libappindicator
     webkitgtk_4_1
+    gtk3
+    libx11
+    libxi
   ];
 
   preBuild = ''
