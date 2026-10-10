@@ -137,7 +137,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mkdir -p $HONK_DOONA_DIR
     cp -rL ${doona-web}/share/doona-web/. $HONK_DOONA_DIR
     chmod -R u+w $HONK_DOONA_DIR
-    rm -rf $HONK_DOONA_DIR/fonts $HONK_DOONA_DIR/.vite
+    rm -rf $HONK_DOONA_DIR/fonts
 
     # honk-core's build.rs embeds the eBPF object and rejects one that is stale
     # or not stamped with the toolchain pin of crates/honk-ebpf.
