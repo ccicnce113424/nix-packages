@@ -26,7 +26,7 @@ flowchart LR
   scope --> out["packages / overlays.default / nixosModules"]
 ```
 
-CI update loop: `update-sources.yml` (daily) runs `nix flake update`, nvfetcher, then `_scripts/run-update-scripts.sh` (every package's `passthru.updateScript`) → PR labeled `dependencies` → Mergify rebase-merges when the `All` gate passes. Push to main also triggers NUR update + Cachix push.
+CI update loop: `update-packages.yml` (daily) spreads every update unit (each package's `passthru.updateScript`, plus nvfetcher-only sources) across a job matrix → per-unit PRs labeled `dependencies` → Mergify rebase-merges when the `All` gate passes. `flake.lock` is kept fresh by dependabot (`nix` ecosystem); `update-flake-lock.yml` (manual) and `update-nvfetcher.yml` (manual bulk refresh) are the on-demand fallbacks. Push to main also triggers NUR update + Cachix push.
 
 ## Key Directories
 
@@ -43,16 +43,16 @@ CI update loop: `update-sources.yml` (daily) runs `nix flake update`, nvfetcher,
 
 Enter dev shell first: `nix develop`, or direnv (`.envrc` = `use flake`).
 
-| Command                                     | Purpose                                                                 |
-| ------------------------------------------- | ----------------------------------------------------------------------- |
-| `nix build -L '.#<attr>'`                   | build one package                                                       |
-| `nix flake check -L`                        | full QA: eval + VM tests + treefmt check (what CI runs)                 |
-| `nix build -L .#checks.x86_64-linux.<name>` | run one NixOS VM test                                                   |
-| `just fmt` (= `nix fmt .`)                  | format + lint entire tree (treefmt)                                     |
-| `just up`                                   | regenerate `_sources/` from `nvfetcher.toml`                            |
-| `just fup`                                  | `nix flake update --commit-lock-file`                                   |
-| `_scripts/run-update-scripts.sh [attr …]`   | run every (or selected) `passthru.updateScript` via nixpkgs `update.py` |
-| `nix-build -A <pkg>` / `nix-shell`          | non-flake compat via `default.nix`/`shell.nix` (flake-compat)           |
+| Command                                     | Purpose                                                                                                                 |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `nix build -L '.#<attr>'`                   | build one package                                                                                                       |
+| `nix flake check -L`                        | full QA: eval + VM tests + treefmt check (what CI runs)                                                                 |
+| `nix build -L .#checks.x86_64-linux.<name>` | run one NixOS VM test                                                                                                   |
+| `just fmt` (= `nix fmt .`)                  | format + lint entire tree (treefmt)                                                                                     |
+| `just up`                                   | regenerate `_sources/` from `nvfetcher.toml`                                                                            |
+| `just fup`                                  | `nix flake update --commit-lock-file`                                                                                   |
+| `_scripts/run-update-scripts.sh [attr …]`   | refresh update units: nvfetcher sources + `passthru.updateScript` (via nixpkgs `update.py`); `--list` prints unit names |
+| `nix-build -A <pkg>` / `nix-shell`          | non-flake compat via `default.nix`/`shell.nix` (flake-compat)                                                           |
 
 `just hello` is vestigial (bare `nix run`; no default output exists).
 
@@ -80,7 +80,7 @@ Enter dev shell first: `nix develop`, or direnv (`.envrc` = `use flake`).
 1. Create `pkgs/<name>/` (copy a neighbor: simple → `lxgw-wenkai-gb`, Rust/Tauri → `dorion-git`, binary → `waywallen-bin`, Go → `kanzi-go`, CMake → `kanzi-cpp`, Flutter → `piliplus`, stable+dev split → `open-orpheus-dev`). Use `package.nix` for the nixpkgs-aligned base (syncable with nixpkgs) and `default.nix` for the repo-native override; a single `default.nix` is fine for repo-only packages.
 2. Add a keep-sorted entry in `pkgs/default.nix`: `foo = self.callPackage ./foo { sources = fetchedSrc.foo; ... };`.
 3. Track sources in `nvfetcher.toml` (`src.github` / `src.git` / `fetch.url`; `cargo_lock`/`extract` for lockfiles) and run `just up`.
-4. Declare `passthru.updateScript` (`nix-update-script { … }` for plain bumps, `[ ./update.sh ]` for sidecar regeneration); `_scripts/run-update-scripts.sh` picks it up automatically.
+4. Declare `passthru.updateScript` (`nix-update-script { … }` for plain bumps, `[ ./update.sh ]` for sidecar regeneration); the `update-packages.yml` matrix picks it up automatically.
 5. `just fmt`, then `nix flake check -L`.
 
 ## Important Files
