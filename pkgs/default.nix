@@ -62,6 +62,10 @@ lib.makeScope pkgs.newScope (
           inherit (sources) src;
           postPatch = null;
           nativeBuildInputs = [ pkgs.autoreconfHook ];
+          passthru = (prev.passthru or { }) // {
+            # Versions are tracked by nvfetcher (`just up`); the inherited xz updater does not apply.
+            updateScript = null;
+          };
           meta = prev.meta // {
             pkgConfigModules = [ "libflzma" ];
           };
@@ -127,7 +131,16 @@ lib.makeScope pkgs.newScope (
       sources = fetchedSrc.ntfsprogs-plus;
     };
 
-    open-orpheus = self.callPackage ./open-orpheus-dev/package.nix { };
+    open-orpheus = (self.callPackage ./open-orpheus-dev/package.nix { }).overrideAttrs (prev: {
+      passthru = (prev.passthru or { }) // {
+        # Shares open-orpheus-dev's update.sh; pinning attrPath keeps the identical
+        # script a single run (see _scripts/update-scripts.nix).
+        updateScript = {
+          command = [ ./open-orpheus-dev/update.sh ];
+          attrPath = "open-orpheus-dev";
+        };
+      };
+    });
 
     open-orpheus-dev = self.callPackage ./open-orpheus-dev {
       inherit (lib.importJSON ./open-orpheus-dev/src-info.json) hash;
@@ -156,6 +169,7 @@ lib.makeScope pkgs.newScope (
       version = unstableVersion sources self.pixes.version;
       pubspecLock = lib.importJSON ./pixes/git/pubspec.lock.json;
       gitHashes = lib.importJSON ./pixes/git/git-hashes.json;
+      updateScript = [ ./pixes/update-git.sh ];
     };
 
     pwasio = self.callPackage ./pwasio rec {
@@ -200,6 +214,8 @@ lib.makeScope pkgs.newScope (
         postInstall = "";
         passthru = lib.recursiveUpdate prev.passthru {
           schedulers = [ "scx_pandemonium" ];
+          # Hand-pinned variant; the inherited updater does not apply.
+          updateScript = null;
         };
       }
     );
@@ -240,6 +256,8 @@ lib.makeScope pkgs.newScope (
             "scx_rusty"
             "scx_tickless"
           ];
+          # Hand-pinned variant; the inherited updater does not apply.
+          updateScript = null;
         };
       }
     );
@@ -274,6 +292,10 @@ lib.makeScope pkgs.newScope (
       pkgs.mpvScripts.uosc-danmaku.overrideAttrs (prev: {
         inherit (sources) src;
         version = unstableVersion sources prev.version;
+        passthru = (prev.passthru or { }) // {
+          # Versions are tracked by nvfetcher (`just up`); the inherited updater does not apply.
+          updateScript = null;
+        };
       });
 
     waywallen-bin = self.callPackage ./waywallen-bin rec {
