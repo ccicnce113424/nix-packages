@@ -26,7 +26,7 @@ flowchart LR
   scope --> out["packages / overlays.default / nixosModules"]
 ```
 
-CI update loop: `update-packages.yml` (daily) spreads every update unit (each package's `passthru.updateScript`, plus nvfetcher-only sources) across a job matrix → per-unit PRs labeled `dependencies` → Mergify rebase-merges when the `All` gate passes. `flake.lock` is kept fresh by dependabot (`nix` ecosystem); `update-flake-lock.yml` (manual) and `update-nvfetcher.yml` (manual bulk refresh) are the on-demand fallbacks. Push to main also triggers NUR update + Cachix push.
+CI update loop: `update-packages.yml` (daily) spreads every update unit (each package's `passthru.updateScript`, plus nvfetcher-only sources) across a job matrix → per-unit PRs labeled `dependencies` → the Mergify merge queue rebase-merges each one against the latest main once the `All` gate passes on the combined result. `flake.lock` is kept fresh by dependabot (`nix` ecosystem); manual runs go through `Update Packages` (with a `units` filter) and `update-flake-lock.yml`. Push to main also triggers NUR update + Cachix push.
 
 ## Key Directories
 
