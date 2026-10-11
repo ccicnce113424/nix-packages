@@ -14,7 +14,7 @@ open-orpheus.overrideAttrs (
     inherit (sources) pname src;
     version = "${prev.version}-unstable-${sources.date}";
     passthru = (prev.passthru or { }) // {
-      # Bumps the open-orpheus version and regenerates the open-orpheus-dev pnpmDeps hash.
+      # Regenerates the open-orpheus-dev pnpmDeps hash after nvfetcher bumps the source.
       updateScript = [ ./update.sh ];
     };
     pnpmDeps = fetchPnpmDeps {

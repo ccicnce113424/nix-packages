@@ -11,8 +11,7 @@
 # real working-tree paths and update scripts can write sidecar files next to themselves.
 #
 # `sources` lists the nvfetcher sources an unit refreshes first; by convention an unit
-# owns the source named after its canonical `attrPath` (shared update scripts pin
-# `attrPath`, e.g. open-orpheus → open-orpheus-dev).
+# owns the source named after its canonical `attrPath`.
 {
   pkgs ? import <nixpkgs> { },
   # Restrict to these unit names; empty list means all.
@@ -44,12 +43,12 @@ let
       attrPath = us.attrPath or name;
     };
 
-  # Run a script shared by multiple attributes (e.g. open-orpheus and open-orpheus-dev)
-  # only once. The key includes attrPath because bare `nix-update` commands are textually
-  # identical across packages and are told apart by UPDATE_NIX_ATTR_PATH; a genuinely
-  # shared script opts in by pinning the same `attrPath` on each declaration. Attribute
-  # names may not carry string context, so the grouping key discards it — the kept
-  # records retain theirs (they reference the store paths to realize).
+  # Run a script shared by multiple attributes only once. The key includes attrPath
+  # because bare `nix-update` commands are textually identical across packages and are
+  # told apart by UPDATE_NIX_ATTR_PATH; a genuinely shared script opts in by pinning the
+  # same `attrPath` on each declaration. Attribute names may not carry string context,
+  # so the grouping key discards it — the kept records retain theirs (they reference the
+  # store paths to realize).
   dedup =
     entries:
     map lib.head (

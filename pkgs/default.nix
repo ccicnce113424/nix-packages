@@ -131,16 +131,7 @@ lib.makeScope pkgs.newScope (
       sources = fetchedSrc.ntfsprogs-plus;
     };
 
-    open-orpheus = (self.callPackage ./open-orpheus-dev/package.nix { }).overrideAttrs (prev: {
-      passthru = (prev.passthru or { }) // {
-        # Shares open-orpheus-dev's update.sh; pinning attrPath keeps the identical
-        # script a single run (see _scripts/update-scripts.nix).
-        updateScript = {
-          command = [ ./open-orpheus-dev/update.sh ];
-          attrPath = "open-orpheus-dev";
-        };
-      };
-    });
+    open-orpheus = self.callPackage ./open-orpheus-dev/package.nix { };
 
     open-orpheus-dev = self.callPackage ./open-orpheus-dev {
       inherit (lib.importJSON ./open-orpheus-dev/src-info.json) hash;
