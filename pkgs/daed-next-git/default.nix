@@ -132,9 +132,10 @@ rustPlatform.buildRustPackage (finalAttrs: {
     cp -R ${web} $out/share/daed/web
 
     install -Dm444 ${webSources.src}/install/daed.desktop $out/share/applications/daed.desktop
-    install -Dm444 ${webSources.src}/install/daed.service $out/lib/systemd/system/daed.service
-    substituteInPlace $out/lib/systemd/system/daed.service \
-      --replace-fail /usr/bin/daed $out/bin/daed
+    # Installed verbatim (NixOS overrides its Exec* through the module's
+    # daed-next.service drop-in) but renamed: upstream calls it daed.service,
+    # which daeuniverse/daed already ships.
+    install -Dm444 ${webSources.src}/install/daed.service $out/lib/systemd/system/daed-next.service
 
     for icon in ${webSources.src}/install/icons/*.png; do
       install -Dm444 "$icon" \
