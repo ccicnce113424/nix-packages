@@ -107,6 +107,8 @@ lib.makeScope pkgs.newScope (
       version = stableVersion sources;
     };
 
+    liblhdcv5 = self.callPackage ./liblhdcv5/package.nix { };
+
     linux-enable-ir-emitter = self.callPackage ./linux-enable-ir-emitter rec {
       sources = fetchedSrc.linux-enable-ir-emitter;
       version = sources.version;
