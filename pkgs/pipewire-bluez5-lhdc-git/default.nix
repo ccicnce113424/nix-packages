@@ -124,6 +124,11 @@ stdenv.mkDerivation (_finalAttrs: {
   installPhase = ''
     runHook preInstall
     install -Dm755 -t "$out/lib/spa-0.2/bluez5" spa/plugins/bluez5/*.so
+    # The plugin resolves its quirks database relative to SPA_DATA_DIR, falling
+    # back to its own compiled-in data directory, which is this very output.
+    # Upstream installs it through meson; the working directory here is the
+    # meson build directory, hence the path back into the source tree.
+    install -Dm644 -t "$out/share/spa-0.2/bluez5" ../spa/plugins/bluez5/bluez-hardware.conf
     runHook postInstall
   '';
 
