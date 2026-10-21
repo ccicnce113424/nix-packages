@@ -58,6 +58,14 @@ rustPlatform.buildRustPackage (finalAttrs: {
     # bpfel-unknown-none, so the plain build above needs no build-std.
     env.RUSTC_BOOTSTRAP = "1";
 
+    # LLVM 21 (nixpkgs' rustc) spills an undefined register inside the
+    # inlined conn_lifecycle() on the CONN_STATE_MAP lookup-miss path; the
+    # 6.18 verifier rejects that store (`R4 !read_ok`). Keeping the lookup in
+    # its own BPF subprogram avoids the bad codegen. LLVM 22 (the upstream
+    # eBPF nightly) does not emit it; drop this when the eBPF build moves to
+    # LLVM >= 22.
+    patches = [ ./conn-lifecycle-inline-never.patch ];
+
     # LLVM's BTFDebug emits only a forward declaration for types referenced
     # solely as map-definition pointer parameters, so the BTF of the
     # ROUTING_POLICY_ROOT inner map lacks the size of its value type and aya
