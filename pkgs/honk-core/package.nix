@@ -7,11 +7,14 @@
   llvmPackages_22,
   cmake,
   gitMinimal,
+  iproute2,
+  makeWrapper,
   ninja,
   appendOverlays,
   symlinkJoin,
   nix-update-script,
   versionCheckHook,
+  withTool ? true,
 }:
 rustPlatform.buildRustPackage (
   finalAttrs:
@@ -133,12 +136,16 @@ rustPlatform.buildRustPackage (
     # `native-ui` would embed a doona build (HONK_DOONA_DIR) into the binary;
     # the UI is served from the doona-web package via `ui: <directory>` instead.
     buildFeatures = [
-      "ebpf"
-      "native-api"
+      "honk-core/ebpf"
+      "honk-core/native-api"
     ];
     cargoBuildFlags = [
       "--package"
       "honk-core"
+    ]
+    ++ lib.optional withTool [
+      "--package"
+      "honk-tool"
     ];
 
     nativeBuildInputs = [
@@ -146,7 +153,8 @@ rustPlatform.buildRustPackage (
       gitMinimal
       ninja
       rustPlatform.bindgenHook
-    ];
+    ]
+    ++ lib.optionals withTool [ makeWrapper ];
 
     # aws-lc-sys and boring-sys build their vendored crypto libraries through
     # cmake; on the vendored sources at 8 jobs the ninja generator beats the
@@ -182,6 +190,14 @@ rustPlatform.buildRustPackage (
       install -Dm444 install/honk.service $out/lib/systemd/system/honk-core.service
     '';
 
+    # honk-tool's `diagnose` shells out to `ip netns exec`; keep iproute2 on
+    # its PATH so the subcommand works in a bare environment. The module adds
+    # the deployment-specific DAE_LOCATION_ASSET on top of this wrapper.
+    postFixup = lib.optionalString withTool ''
+      wrapProgram $out/bin/honk-tool \
+        --prefix PATH : "${lib.makeBinPath [ iproute2 ]}"
+    '';
+
     # The test suite exercises eBPF, network namespaces and live endpoints
     # (see the upstream Justfile's test-* recipes).
     doCheck = false;
@@ -190,7 +206,7 @@ rustPlatform.buildRustPackage (
     nativeInstallCheckInputs = [ versionCheckHook ];
 
     passthru = {
-      inherit honk-ebpf;
+      inherit honk-ebpf withTool;
       updateScript = nix-update-script {
         extraArgs = [
           "--use-github-releases"
