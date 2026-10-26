@@ -107,7 +107,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
         ]
       }
       # Tricky way to make the protocol handler desktop file point to the wrapper
-      --set-default APPIMAGE rayburst
+      --set APPIMAGE "$out/bin/rayburst"
     )
     wrapGApp $out/bin/rayburst
   '';
@@ -117,7 +117,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   meta = {
     description = "Desktop download manager for files, torrents and streams";
     homepage = "https://github.com/AnInsomniacy/rayburst";
-    changelog = "https://github.com/AnInsomniacy/rayburst/releases/tag/v${finalAttrs.version}";
+    changelog = "https://github.com/AnInsomniacy/rayburst/releases/tag/${finalAttrs.src.tag}";
     license = with lib.licenses; [
       mit
       gpl2Plus
