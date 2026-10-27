@@ -75,9 +75,9 @@ stdenvNoCC.mkDerivation (
     installPhase = ''
       runHook preInstall
 
-      mkdir -p $out/share/${finalAttrs.pname}
-      cp -r ${if isLite then liteRoot else "."}/dist/. $out/share/${finalAttrs.pname}
-      rm -rf $out/share/${finalAttrs.pname}/.vite
+      mkdir -p $out
+      cp -r ${if isLite then liteRoot else "."}/dist/. $out/
+      rm -rf $out/.vite
 
       runHook postInstall
     '';
