@@ -282,16 +282,16 @@
   };
   piliplus = {
     pname = "piliplus";
-    version = "2.1.6.2";
+    version = "2.2.0";
     src = fetchFromGitHub {
       owner = "bggRGjQaUbCoE";
       repo = "PiliPlus";
-      rev = "2.1.6.2";
+      rev = "2.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-PrXUQdEZUMNkTzaS7gGgQTrRWcF+4a0tFSpWqLwaubI=";
+      sha256 = "sha256-UffoFa/UwUeZij1vXw4oANd0HxnJN80pc6IRp8EBBqk=";
     };
     extract = {
-      "pubspec.lock" = ./. + "/sha256-PrXUQdEZUMNkTzaS7gGgQTrRWcF+4a0tFSpWqLwaubI=/pubspec.lock";
+      "pubspec.lock" = ./. + "/sha256-UffoFa_UwUeZij1vXw4oANd0HxnJN80pc6IRp8EBBqk=/pubspec.lock";
     };
   };
   pipewire-bluez5-lhdc-git = {
