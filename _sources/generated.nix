@@ -24,21 +24,21 @@
   };
   daed-next-core = {
     pname = "daed-next-core";
-    version = "17027e4309232568224819fbf2f33cd0b9b40b4a";
+    version = "d0c477e626178d75130f95ef5c6dfe2fcd4a0246";
     src = fetchFromGitHub {
       owner = "ksong008";
       repo = "DaeNext";
-      rev = "17027e4309232568224819fbf2f33cd0b9b40b4a";
+      rev = "d0c477e626178d75130f95ef5c6dfe2fcd4a0246";
       fetchSubmodules = false;
-      sha256 = "sha256-nEOuW5BcvwtmIywauGb/KJqLRoJtpRsXfCwLTk07C/E=";
+      sha256 = "sha256-QgLid6JxeXxPICdOwfx3sjxAgn6cfrzdJS2DnIYmBoY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-nEOuW5BcvwtmIywauGb_KJqLRoJtpRsXfCwLTk07C_E=/Cargo.lock";
+      lockFile = ./. + "/sha256-QgLid6JxeXxPICdOwfx3sjxAgn6cfrzdJS2DnIYmBoY=/Cargo.lock";
       outputHashes = {
         
       };
     };
-    date = "2026-11-01";
+    date = "2026-11-02";
   };
   daed-next-web = {
     pname = "daed-next-web";
