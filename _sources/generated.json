@@ -79,7 +79,7 @@
     "dorion-git": {
         "cargoLock": {
             "src-tauri/Cargo.lock": [
-                "sha256-2KoYkoXNPZYrirYCLFhkC3EU3TJ3+rcujYhdVYT4jfM=/src-tauri/Cargo.lock",
+                "sha256-1lvHMk0j66TshcJLDBroggS13XD+xOjYeZ+4oHdtjl8=/src-tauri/Cargo.lock",
                 {
                     "livesplit-hotkey-0.8.0": "sha256-iYAzlkYMEN2v4IhsnljWpUZkJO5CN1vcqz5thAJvbXc=",
                     "rsrpc-0.29.0": "sha256-7zS833bmy6JUjk4PqCENz6ikoTOtelcymXMi2pxD3V0=",
@@ -90,7 +90,7 @@
                 }
             ]
         },
-        "date": "2026-10-28",
+        "date": "2026-11-03",
         "extract": null,
         "name": "dorion-git",
         "passthru": null,
@@ -102,12 +102,12 @@
             "name": null,
             "owner": "SpikeHD",
             "repo": "Dorion",
-            "rev": "83d645fbddfdf2377c74ff1b4fc8f687ce36c1dd",
-            "sha256": "sha256-2KoYkoXNPZYrirYCLFhkC3EU3TJ3+rcujYhdVYT4jfM=",
+            "rev": "fc3c0d7664c39d66391863f4c4c399f3917374ac",
+            "sha256": "sha256-1lvHMk0j66TshcJLDBroggS13XD+xOjYeZ+4oHdtjl8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "83d645fbddfdf2377c74ff1b4fc8f687ce36c1dd"
+        "version": "fc3c0d7664c39d66391863f4c4c399f3917374ac"
     },
     "dxvk-gplall": {
         "cargoLock": null,
