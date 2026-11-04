@@ -172,7 +172,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # Installed as honk-core.service — the name doona's restart notice uses.
   # The NixOS module consumes it through systemd.packages.
   postInstall = ''
-    install -Dm444 install/honk.service $out/lib/systemd/system/honk-core.service
+    install -Dm444 install/honk-core.service $out/lib/systemd/system/honk-core.service
   '';
 
   # honk-tool's `diagnose` shells out to `ip netns exec`; keep iproute2 on
