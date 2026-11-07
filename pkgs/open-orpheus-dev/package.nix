@@ -6,7 +6,7 @@
   fetchPnpmDeps,
   pnpmConfigHook,
   nodejs,
-  electron_44,
+  electron_45,
   rustPlatform,
   cargo,
   rustc,
@@ -24,7 +24,7 @@
 }:
 let
   pnpm = pnpm_12;
-  electron = electron_44;
+  electron = electron_45;
   wasm-bindgen-cli = callPackage (
     {
       buildWasmBindgenCli,
@@ -35,14 +35,14 @@ let
     buildWasmBindgenCli rec {
       src = fetchCrate {
         pname = "wasm-bindgen-cli";
-        version = "0.2.128";
-        hash = "sha256-a7lcXJnnZkYReja+iUO7NqqrWyv3toxnUgQb8s4IS5s=";
+        version = "0.2.130";
+        hash = "sha256-9Og1O/6/VC3sc5hBjoIWBErmLW2UHGMsTQO+6+m/dng=";
       };
 
       cargoDeps = rustPlatform.fetchCargoVendor {
         inherit src;
         inherit (src) pname version;
-        hash = "sha256-R1Tas33Ursy8kqsxguAkG0ZhNed2n5uFTAhw1l2qlLY=";
+        hash = "sha256-j81sUf1m5yXU4FJfGj7GV+hdqVCV8mRmNb0QIsMCjqw=";
       };
     }
   ) { };
