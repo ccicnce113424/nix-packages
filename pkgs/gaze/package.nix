@@ -10,6 +10,7 @@
   gst_all_1,
   onnxruntime,
   opencv,
+  pam,
   pipewire,
   tpm2-tss,
   zstd,
@@ -55,6 +56,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     gst_all_1.gst-plugins-base
     onnxruntime
     opencv
+    pam
     tpm2-tss
     zstd
   ];
