@@ -471,7 +471,7 @@
         "cargoLock": null,
         "date": null,
         "extract": {
-            "pubspec.lock": "sha256-UuJ3kmYqXGZ9HOii1oCvecm12SNwjrnpOzvhnETSihA=/pubspec.lock"
+            "pubspec.lock": "sha256-IhW0TKDf7Pfr7zD65SEF3eXzKwrkvBLX+7XhWEyiyD8=/pubspec.lock"
         },
         "name": "piliplus",
         "passthru": null,
@@ -483,12 +483,12 @@
             "name": null,
             "owner": "bggRGjQaUbCoE",
             "repo": "PiliPlus",
-            "rev": "2.2.0.2",
-            "sha256": "sha256-UuJ3kmYqXGZ9HOii1oCvecm12SNwjrnpOzvhnETSihA=",
+            "rev": "2.2.1",
+            "sha256": "sha256-IhW0TKDf7Pfr7zD65SEF3eXzKwrkvBLX+7XhWEyiyD8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.2.0.2"
+        "version": "2.2.1"
     },
     "pipewire-bluez5-lhdc-git": {
         "cargoLock": null,
