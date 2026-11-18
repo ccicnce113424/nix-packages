@@ -42,15 +42,15 @@
   };
   daed-next-web = {
     pname = "daed-next-web";
-    version = "76ad4577501ba327da304c0f520f6fa707594ef8";
+    version = "96e4b2af9be2193d0dc86a7e3709b360c1b082e6";
     src = fetchFromGitHub {
       owner = "ksong008";
       repo = "DaedNext";
-      rev = "76ad4577501ba327da304c0f520f6fa707594ef8";
+      rev = "96e4b2af9be2193d0dc86a7e3709b360c1b082e6";
       fetchSubmodules = false;
-      sha256 = "sha256-mtYNPv8oz6wtmP3N/zlUQ6SeFq9Vr+4halN/mU4JPB4=";
+      sha256 = "sha256-+/kx+WwASLvCW82wkhZUh+mbej0Ijd33880TNhGApjE=";
     };
-    date = "2026-10-26";
+    date = "2026-11-18";
   };
   dorion-git = {
     pname = "dorion-git";
