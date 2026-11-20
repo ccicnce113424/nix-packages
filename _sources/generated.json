@@ -327,7 +327,7 @@
     },
     "nix-auth": {
         "cargoLock": null,
-        "date": "2026-11-18",
+        "date": "2026-11-19",
         "extract": null,
         "name": "nix-auth",
         "passthru": null,
@@ -339,12 +339,12 @@
             "name": null,
             "owner": "numtide",
             "repo": "nix-auth",
-            "rev": "6a37bd15a2567516dd5aa175ebd5a320ae89aecb",
-            "sha256": "sha256-2zZjduxp2Coq6PhTCQL4ALX1zTuVsJTrRYOfFuRe9G4=",
+            "rev": "581dce2dcffe51e66995e85b2687c018aaf6de30",
+            "sha256": "sha256-7NsGOPj98RmpDbj789d2BIB+i9zGPqJWd0GwRBCwocc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "6a37bd15a2567516dd5aa175ebd5a320ae89aecb"
+        "version": "581dce2dcffe51e66995e85b2687c018aaf6de30"
     },
     "ntfsprogs-plus": {
         "cargoLock": null,
