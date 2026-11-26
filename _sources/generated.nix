@@ -431,15 +431,15 @@
   };
   uosc-danmaku-git = {
     pname = "uosc-danmaku-git";
-    version = "d896f179aac1c9e7e657664dbe8a69567a9a4900";
+    version = "74ade6cbed91bd58aee219010ded9d96598262cf";
     src = fetchFromGitHub {
       owner = "Tony15246";
       repo = "uosc_danmaku";
-      rev = "d896f179aac1c9e7e657664dbe8a69567a9a4900";
+      rev = "74ade6cbed91bd58aee219010ded9d96598262cf";
       fetchSubmodules = false;
-      sha256 = "sha256-IDxylx61HTYki34Ehy3hgHDua8F1b8xEV0IW8xjV6uI=";
+      sha256 = "sha256-b8CLOHc9Nje03Q6ePAwrNdqCBFKyyGXj251Clt2XoZQ=";
     };
-    date = "2026-10-30";
+    date = "2026-11-25";
   };
   waywallen-bin = {
     pname = "waywallen-bin";
